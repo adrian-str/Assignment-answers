@@ -1,2 +1,2 @@
-# BAS
-Code repository for UPM Bioinformatics course Beniamin Adrian Stremtan
+# BAS_BioinfoChallenges
+Code repository for UPM Bioinformatics Programming Challenges course Beniamin Adrian Stremtan
