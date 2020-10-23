@@ -25,7 +25,7 @@ class Gene
       else
         puts ("Gene ID: #{id} incorrect")
       end
-      puts
+      
     end
   end
   

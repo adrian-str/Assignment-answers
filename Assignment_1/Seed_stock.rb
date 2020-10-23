@@ -58,7 +58,13 @@ class Seed_stock
   end
   
   def Seed_stock.get_seed_stock(id)
-    Seed_stock.get_stocks.find {|o| o.seed_stock==id} || puts("Stock ID not found")
+     if Seed_stock.get_stocks.find {|o| o.seed_stock==id}
+       f=Seed_stock.get_stocks.find {|o| o.seed_stock==id}
+       puts ("ID: "+f.seed_stock+"; Gene ID: "+f.id+"; Last planted: "+f.last_planted+"; Storage: "+f.storage+"; Grams: "+f.grams.to_s+"; Gene name: "+f.gene.gene_name+"")
+     else
+       puts "Stock ID not found."
+     end
+     
   end
   
 end
