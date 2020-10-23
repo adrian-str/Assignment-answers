@@ -6,12 +6,13 @@ class Cross
   attr_accessor :f2_p1
   attr_accessor :f2_p2
   attr_accessor :f2_p1p2
-  # Another property to link the Seed_stock object
-  attr_accessor :seed_stock_id
+  # Another two properties to link the Seed_stock object
+  attr_accessor :seed_stock1
+  attr_accessor :seed_stock2
   # A class variable to save the linked IDs
   @@linked=[]
   # Class variable that will contain all the stocks
-  # It will allow us to do the Chi square test
+  # It will allow doing the Chi square test
   @@all_crosses=[]
 
   def initialize(params={})
@@ -30,32 +31,35 @@ class Cross
     File.readlines(file_path)[1..-1].each do |line| #Read the file lines and skip header
       p1, p2, f2w, f2p1, f2p2, f2p1p2 = line.strip.split("\t")
       Cross.new(:parent1 => p1, :parent2 => p2  , :f2_wild => f2w,  :f2_p1=> f2p1, :f2_p2 => f2p2, :f2_p1p2 => f2p1p2)
+      
     end
+    puts
   end
   
   def Cross.get_crosses
     return @@all_crosses
+    
   end
   
   def Cross.chi2
-    @@all_crosses.each {|e|  
-      obs=[e.f2_wild,e.f2_p1,e.f2_p2,e.f2_p1p2].flatten.map{|x| x.to_f}
+    Cross.get_crosses.select {|e|  
+      obs=[e.f2_wild,e.f2_p1,e.f2_p2,e.f2_p1p2].map{|x| x.to_f}
       total=obs.sum
-      puts total
       exp=[9,3,3,1].map{|x| x*(total/16)}
-      puts exp
-      puts obs
-      rest= (obs - exp)
-      puts rest
-      chi= [([rest].map{|x| x**2})/exp].sum
+      rest= [obs[0]-exp[0],obs[1]-exp[1],obs[2]-exp[2],obs[3]-exp[3]].map! {|x| x**2}
+      div= [rest[0]/exp[0],rest[1]/exp[1],rest[2]/exp[2],rest[3]/exp[3]]
+      chi= div.sum
+      
       # For all dihybrid crosses, the degree of freedom should be: (number of phenotypes – 1)
       # Since we have 4 phenotypes, df=3
       # When df = 3, a value > 7.815 means results are statistically significant (p < 0.05)
       # If results are statistically significant the genes are linked
-      # source= https://ib.bioninja.com.au/higher-level/topic-10-genetics-and-evolu/102-inheritance/chi-squared-test.html
+      # source = https://ib.bioninja.com.au/higher-level/topic-10-genetics-and-evolu/102-inheritance/chi-squared-test.html
       if chi>7.815
-        puts "#{e.seed_stock1.gene.gene_name} is linked to #{e.seed_stock2.gene.gene_name} with Chisquare score: #{chi}."
-        
+        puts "Recording: #{e.seed_stock1.gene.gene_name} is genetically linked to #{e.seed_stock2.gene.gene_name} with Chisquare score: #{chi}."
+        e.seed_stock1.gene.linked_to=e.seed_stock2.gene.gene_name
+        e.seed_stock2.gene.linked_to=e.seed_stock1.gene.gene_name
+        puts
       end
     }
     
