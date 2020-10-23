@@ -23,7 +23,7 @@ class Gene
         puts ("Gene ID: #{id} incorrect")
       end
     end
-  def Gene.get_genes
+  def Gene.get_all
     return @@all_genes
     
   end
