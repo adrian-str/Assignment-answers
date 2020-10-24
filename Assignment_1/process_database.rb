@@ -9,7 +9,7 @@ gpath="./"+ARGV[0]+""
 spath="./"+ARGV[1]+""
 cpath="./"+ARGV[2]+""
 upath=""+ARGV[3]+""
-puts "\nLoading the data...\n"
+puts "Loading the data..."
 Gene.get_genes(gpath)
 Seed_stock.load_from_file(spath)
 Cross.get_data(cpath)
@@ -30,9 +30,9 @@ puts "\n Task #2"
 puts "\nChecking which genes are linked with Chi-square test"
 puts "...and adding them as a property of each linked gene:\n\n"
 Cross.chi2
-puts "\nFinal Report:\n\n"
+puts "Final Report:\n\n"
 Gene.get_links
-puts "\n****************************"
+puts "\n***********************************************************"
 puts "\nBONUS"
 puts "\n1.Let's load some gene data with an incorrect identifier:\n\n"
 Gene.get_genes("./gene_incorrect.tsv")

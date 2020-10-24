@@ -14,12 +14,12 @@ class Gene
     @gene_name = params.fetch(:gene_name, "abc")
     @mut_phenotype = params.fetch(:mut_phenotype, "missing phenotype")
     @linked_to="none"
-    @@all_genes << self
+    @@all_genes << self # save everything in this list
   end
 # To create the objects for this class (and the others) I use a class method:
   def Gene.get_genes(file_path)
     File.readlines(file_path)[1..-1].each do |line| #Read the file lines and skip header
-      id, name, phenotype = line.strip.split("\t")
+      id, name, phenotype = line.strip.split("\t") #strip the lines of newlines' (\n), separate values by tab, and save them in the different instance var 
       if id=~ /A[T]\d[G]\d\d\d\d\d/
         Gene.new(:gene_ID => id  , :gene_name => name,  :mut_phenotype => phenotype)
       else
@@ -29,14 +29,14 @@ class Gene
     end
   end
   
-  def Gene.get_all
+  def Gene.get_all # Class method to access all the objects
     return @@all_genes
     
   end
   
-  def Gene.get_links
+  def Gene.get_links #for the final report of linked genes
     Gene.get_all.each do |l|
-      if l.linked_to != "none"
+      if l.linked_to != "none" #if a gene has a link print it
         puts "#{l.gene_name} is linked to #{l.linked_to}"
       end
     end  
