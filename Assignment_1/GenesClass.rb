@@ -3,6 +3,7 @@ class Gene
   attr_accessor :gene_ID
   attr_accessor :gene_name
   attr_accessor :mut_phenotype
+# Property to be added after the Chi-square test  
   attr_accessor :linked_to
 # Class variable that will contain all the genes
 # it will allow us to link with Seeds_stock object

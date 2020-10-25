@@ -6,7 +6,7 @@ class Cross
   attr_accessor :f2_p1
   attr_accessor :f2_p2
   attr_accessor :f2_p1p2
-  # Another two properties to link the Seed_stock object
+  # Another two properties to link the Seed_stock object with each parent
   attr_accessor :seed_stock1
   attr_accessor :seed_stock2
   # Class variable that will contain all the stocks
