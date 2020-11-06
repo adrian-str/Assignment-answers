@@ -13,9 +13,10 @@ class InteractionNetwork
     @members = params.fetch(:members,'NA')
     @kegg_path = params.fetch(:kegg_path,'NA')
     @go_terms = params.fetch(:go_terms,'NA')
+    
   end
   
-  def fetch(url, headers = {accept: "*/*"}, user = "", pass="")
+  def self.fetch(url, headers = {accept: "*/*"}, user = "", pass="")
     response = RestClient::Request.execute({
       method: :get,
       url: url.to_s,
@@ -38,35 +39,46 @@ class InteractionNetwork
       return response  # now we are returning 'False', and we will check that with an \"if\" statement in our main code
   end
    
-  
-  def self.search_interactors(file)
-        @intact=Hash.new
-        File.open(file).each do |code|
-          
-          res = fetch("http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/query/#{code.strip}%20AND%20species:arath/?format=tab25")
-          @intact[code.strip]=res.body.split("\n")
-           
+  def self.get_agi(file)
+    @@genes=[]
+    File.open(file).each do |code|
+      @@genes << code
     end
-    
+    return @@genes
   end
   
-  def self.search_ppi(intact, cutv=0.485)
-    @genes=intact.keys
-    
-    score=/i\w+-\w+:(0\.\d+)/
-    intact.each do |a,int|
-      int.each do |i|
-        g1,g2=i.scan(/A[T]\d[G]\d\d\d\d\d/)
-        score=i.match(score)[1].to_f
-        next if score<=cutv
-        if @genes===g1||@genes===g2
-          
-            #code
+  @counter=0
+  def self.search_interactors(genes)
+    @counter=+1
+    @interacts=Hash.new    
+    if genes.is_a?(Array)
+      genes.each do |code|
+        res = fetch("http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/interactor/#{code}%20AND%20species:arath/?format=tab25")
+        score=/i\w+-\w+:(0\.\d+)/
+        if res
+          intact=res.body.split("\n")
+          intact.each do |int|
+            g1=int.match(/(A[T]\d[G]\d\d\d\d\d)\(locus\sname\)/)[1]
+            score=int.match(score)[1].to_f
+            next if score<=cutv
+            if @@genes===g1
+              @interacts[code]=g1
+            else
+              search_interactors(g1)
+              
+            end
+          end
         end
-        
-        
       end
-    end
-    end
+    end 
   end
+  
+
+  
+
+        
+        
+      
+    
+  
 end
