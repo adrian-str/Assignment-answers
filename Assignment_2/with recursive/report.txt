@@ -1,0 +1,104 @@
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+Report file of an analysis to study the possible interaction between predicted co-expressed genes.
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+The number of genes analysed is 168
+To filter the possible networks a MIscore cutoff value of 0.485 has been used, as proposed in this article: ncbi.nlm.nih.gov/pmc/articles/PMC4316181/
+Interactions have been searched at two levels of depth, so they can be direct or indirect. If there are two members in the network it is direct and if there are three it's indirect.
+8 networks have been detected.
+---------------------------------------------------------------------
+Network number 1:
+	The interaction of this network is direct between the genes:
+		-at5g04140 and ["At4g37930", "At5g04140"]
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00630 with pathway name: Glyoxylate and dicarboxylate metabolism
+		-KEGG ID: ath00910 with pathway name: Nitrogen metabolism
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0019676 with term: ammonia assimilation cycle
+		-GO ID: GO:0006537 with term: glutamate biosynthetic process
+		-GO ID: GO:0097054 with term: L-glutamate biosynthetic process
+		-GO ID: GO:0009853 with term: photorespiration
+		-GO ID: GO:0080114 with term: positive regulation of glycine hydroxymethyltransferase activity
+		-GO ID: GO:0009416 with term: response to light stimulus
+		-GO ID: GO:0009744 with term: response to sucrose
+		-GO ID: GO:0006541 with term: glutamine metabolic process
+---------------------------------------------------------------------
+Network number 2:
+	The interaction of this network is direct between the genes:
+		-at1g37130 and ["At5g18930", "At1g37130"]
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00910 with pathway name: Nitrogen metabolism
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0042128 with term: nitrate assimilation
+		-GO ID: GO:0006809 with term: nitric oxide biosynthetic process
+		-GO ID: GO:0009635 with term: response to herbicide
+		-GO ID: GO:0009416 with term: response to light stimulus
+		-GO ID: GO:0009610 with term: response to symbiotic fungus
+---------------------------------------------------------------------
+Network number 3:
+	The interaction of this network is direct between the genes:
+		-at4g19170 and ["At5g17790", "At4g19170"]
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00906 with pathway name: Carotenoid biosynthesis
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+		-KEGG ID: ath01110 with pathway name: Biosynthesis of secondary metabolites
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0016121", "carotene catabolic process"] with term: 
+---------------------------------------------------------------------
+Network number 4:
+	The interaction of this network is direct between the genes:
+		-at5g15850 and ["At4g10240", "At5g15850"]
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009909 with term: regulation of flower development
+		-GO ID: GO:0000398 with term: mRNA splicing, via spliceosome
+---------------------------------------------------------------------
+Network number 5:
+	The interaction of this network is direct between the genes:
+		-at1g54040 and ["At4g23810", "At1g54040"]
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0042742 with term: defense response to bacterium
+		-GO ID: GO:0019762 with term: glucosinolate catabolic process
+		-GO ID: GO:0010150 with term: leaf senescence
+		-GO ID: GO:0080028 with term: nitrile biosynthetic process
+		-GO ID: GO:0009753 with term: response to jasmonic acid
+---------------------------------------------------------------------
+Network number 6:
+	The interaction of this network is direct between the genes:
+		-at3g45780 and ["At5g64330", "At3g45780"]
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009904 with term: chloroplast accumulation movement
+		-GO ID: GO:0009903 with term: chloroplast avoidance movement
+		-GO ID: GO:0007623 with term: circadian rhythm
+		-GO ID: GO:0010362 with term: negative regulation of anion channel activity by blue light
+		-GO ID: GO:0009638 with term: phototropism
+		-GO ID: GO:0046777 with term: protein autophosphorylation
+		-GO ID: GO:0006468 with term: protein phosphorylation
+		-GO ID: GO:0018298 with term: protein-chromophore linkage
+		-GO ID: GO:0010155 with term: regulation of proton transport
+		-GO ID: GO:0010119 with term: regulation of stomatal movement
+		-GO ID: GO:0009637 with term: response to blue light
+		-GO ID: GO:0050896 with term: response to stimulus
+---------------------------------------------------------------------
+Network number 7:
+	The interaction of this network is direct between the genes:
+		-at3g62410 and ["At3g26650", "At3g62410"]
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0071454 with term: cellular response to anoxia
+		-GO ID: GO:0070417 with term: cellular response to cold
+		-GO ID: GO:0034605 with term: cellular response to heat
+		-GO ID: GO:0080153 with term: negative regulation of reductive pentose-phosphate cycle
+		-GO ID: GO:0018316 with term: peptide cross-linking via L-cystine
+		-GO ID: GO:0065003 with term: protein-containing complex assembly
+		-GO ID: GO:0019253 with term: reductive pentose-phosphate cycle
+		-GO ID: GO:0009416 with term: response to light stimulus
+		-GO ID: GO:0009744 with term: response to sucrose
+---------------------------------------------------------------------
+Network number 8:
+	The interaction of this network is direct between the genes:
+		-at4g39710 and ["At4g03280", "At4g39710"]
+	No pathways have been found in KEGG for the genes in this network.
+	No terms have been found in Gene Ontology for the genes in this network.

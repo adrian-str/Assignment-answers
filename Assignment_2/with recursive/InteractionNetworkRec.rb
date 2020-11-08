@@ -1,19 +1,21 @@
 require 'rest-client'
 require 'json'
-
 class InteractionNetwork
   
+  @@num = 0 #to count the number of networks
   attr_accessor :network
   attr_accessor :members
   attr_accessor :kegg_path
   attr_accessor :go_terms
   @@all_interactions=[]
+  @@genes=[]
   
   def initialize(params={})
     @network = params.fetch(:network,0)
     @members = params.fetch(:members,'NA')
     @kegg_path = annotate_kegg(ids=@members)
     @go_terms = annotate_GO(ids=@members)
+    @@num += 1
     @@all_interactions << self
   end
   
@@ -41,103 +43,79 @@ class InteractionNetwork
   end
    
   def self.get_agi(file)
-    @@genes=[]
+    
     File.open(file).each do |code|
       @@genes << code.strip.downcase
     end
-    return @@genes
+    
   end
   
   def self.get_interacting
     return @@interacting
   end
   
+  def self.num #to get the number of networks
+    return @@num
+  end
+  
   def self.search_interactors
-    @@counter=0
+    
     @@interacting=Hash.new
       
-    @@genes.each do |code|
-      
-      InteractionNetwork.get_interactors(code)
+    @@genes.each do |agi|
+      @@counter=0
+      @agi=agi
+      InteractionNetwork.get_interactors(agi)
       
     end
     
   end
   
   def self.get_interactors(code,cutv=0.485)
-      genes=@@genes
-      res = InteractionNetwork.fetch("http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/interactor/#{code}%20AND%20species:arath/?format=tab25")
-      miscore=/i\w+-\w+:(0\.\d+)/
-      if res
-        intact=res.body.split("\n")
-        intact.each do |int|
-          
-          next if int.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)\(locus\sname\)/).nil?
-             
-            g1,g2=int.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)\(locus\sname\)/)
-          next if g1.nil?||g2.nil?
-            g1=g1[0]
-            g2=g2[0]
-            
-          
-          if g1.downcase==code.downcase #get the interactor not the same gene
-            
-            g1=g2
-            
-          end
-          
-          score=int.match(miscore)[1].to_f
-          
-          next if score<cutv
-          if genes.include?(g1.downcase)
-             @@interacting[code]=g1
-             
-            
-          else
-            g0=g1
-            res = InteractionNetwork.fetch("http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/interactor/#{g0}%20AND%20species:arath/?format=tab25")
-            if res
-              intact2=res.body.split("\n")
-              intact2.each do |int2|
-          
-                next if int2.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)\(locus\sname\)/).nil?
-               
-                g1,g2=int2.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)\(locus\sname\)/)
-                next if g1.nil?||g2.nil?
-                g1=g1[0]
-                g2=g2[0]
-              
-                
-                if g1.downcase==g0.downcase #get the interactor not the same gene
-              
-                  g1=g2
-              
-                end
-                next if g1.downcase==code.downcase
-                score=int.match(miscore)[1].to_f
-            
-                next if score<cutv
-                if genes.include?(g1.downcase)
-                  if !@@interacting.keys.include?(code) # to avoid over-writing interactions
-                      @@interacting[code]=[g0,g1]
-                  end
-                end
-              end
-            
-            
-            end
-          end  
-            
-        end
-      end
+    genes=@@genes
+    agi=@agi
+    miscore=/i\w+-\w+:(0\.\d+)/
     
+    while @@counter < 3  
+        @@counter += 1
+        res = fetch("http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/interactor/#{code}%20AND%20species:arath/?format=tab25")
+        miscore=/i\w+-\w+:(0\.\d+)/
+        if res
+          intact=res.body.split("\n")
+          intact.each do |int|
+            
+            next if int.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)\(locus\sname\)/).nil?
+             
+              g1,g2=int.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)\(locus\sname\)/)
+            next if g1.nil?||g2.nil? 
+              g1=g1[0]
+              g2=g2[0]
+              
+            if g1.downcase==code.downcase #get the interactor not the same gene
+               g1=g2
+            end
+            score=int.match(miscore)[1].to_f
+            next if score<cutv
+            if genes.include?(g1.downcase) 
+              if @@counter == 1       
+                @@interacting[code]=g1
+              elsif @@counter == 2 && agi != g1.downcase #if the gene is on the list and is different from the one used to search
+                #when its looking for indirect interactions save the intermediate locus
+                @@interacting[agi]=[code,g1] 
+              end
+            else
+              InteractionNetwork.get_interactors(g1)
+              
+            end
+          end
+        end
+    end
     
   end  
 
   def annotate_kegg(ids,db="genes",field="pathways")
     
     ids.each do |id|
-    
       resp = InteractionNetwork.fetch("http://togows.org/entry/#{db}/ath:#{id}/#{field}.json")
       annotations=[]
       if resp
@@ -149,15 +127,13 @@ class InteractionNetwork
           annotations << annotation
         end
       end
-      return annotations 
-    end    
-      
+      return annotations
+    end  
   end    
   
   def annotate_GO(ids,db="uniprot",field="dr")
     
     ids.each do |id|
-    
       resp = InteractionNetwork.fetch("http://togows.org/entry/#{db}/#{id}/#{field}.json")
       annotations=[]
       if resp
@@ -168,14 +144,11 @@ class InteractionNetwork
             goterm=term[1].match(/:(.+)/)[1]
             annotation=[goid,goterm]
             annotations << annotation
-            
           end
         end
         return annotations.uniq # some GO terms are repeated in this database
       end
-      
-    end    
-        
+    end      
   end
   
   def self.load
