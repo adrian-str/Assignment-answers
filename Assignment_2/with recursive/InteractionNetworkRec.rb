@@ -66,7 +66,7 @@ class InteractionNetwork
       @@counter=0
       @agi=agi
       InteractionNetwork.get_interactors(agi)
-      
+      next if @@counter == 2
     end
     
   end
@@ -76,7 +76,7 @@ class InteractionNetwork
     agi=@agi
     miscore=/i\w+-\w+:(0\.\d+?)/
     
-    while @@counter < 3  
+    if @@counter < 3  
         @@counter += 1
         res = InteractionNetwork.fetch("http://bar.utoronto.ca:9090/psicquic/webservices/current/search/interactor/#{code}/?format=tab25")
         
@@ -109,6 +109,7 @@ class InteractionNetwork
             end
           end
         end
+    
     end
     
   end  

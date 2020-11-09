@@ -175,7 +175,8 @@ Network number 12:
 		-GO ID: GO:0010244 with term: response to low fluence blue light stimulus by blue low-fluence system
 ---------------------------------------------------------------------
 Network number 13:
-what?? ["at3g45780", "At3g45780", "at1g09340", "At3g63140", "at1g09340", "at3g63140", "At1g09340", "at3g63140"]
+	The interaction of this network is direct between the genes:
+		-AT3G45780 and AT3G45780
 	No pathways have been found in KEGG for the genes in this network.
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009904 with term: chloroplast accumulation movement
@@ -192,35 +193,32 @@ what?? ["at3g45780", "At3g45780", "at1g09340", "At3g63140", "at1g09340", "at3g63
 		-GO ID: GO:0050896 with term: response to stimulus
 ---------------------------------------------------------------------
 Network number 14:
-what?? ["at3g45780", "At3g45780", "at1g09340", "At3g63140", "at1g09340", "at3g63140", "At1g09340", "at3g63140"]
+	The interaction of this network is direct between the genes:
+		-AT1G09340 and AT3G63140
 	No pathways have been found in KEGG for the genes in this network.
 	The biological process terms from Gene Ontology associated with these genes are:
-		-GO ID: GO:0009904 with term: chloroplast accumulation movement
-		-GO ID: GO:0009903 with term: chloroplast avoidance movement
+		-GO ID: GO:0042631 with term: cellular response to water deprivation
+		-GO ID: GO:0009658 with term: chloroplast organization
 		-GO ID: GO:0007623 with term: circadian rhythm
-		-GO ID: GO:0010362 with term: negative regulation of anion channel activity by blue light
-		-GO ID: GO:0009638 with term: phototropism
-		-GO ID: GO:0046777 with term: protein autophosphorylation
-		-GO ID: GO:0006468 with term: protein phosphorylation
-		-GO ID: GO:0018298 with term: protein-chromophore linkage
-		-GO ID: GO:0010155 with term: regulation of proton transport
-		-GO ID: GO:0010119 with term: regulation of stomatal movement
-		-GO ID: GO:0009637 with term: response to blue light
-		-GO ID: GO:0050896 with term: response to stimulus
+		-GO ID: GO:0042742 with term: defense response to bacterium
+		-GO ID: GO:0005996 with term: monosaccharide metabolic process
+		-GO ID: GO:0032544 with term: plastid translation
+		-GO ID: GO:0000272 with term: polysaccharide catabolic process
+		-GO ID: GO:0045893 with term: positive regulation of transcription, DNA-templated
+		-GO ID: GO:0045727 with term: positive regulation of translation
+		-GO ID: GO:0010468 with term: regulation of gene expression
+		-GO ID: GO:0009409 with term: response to cold
+		-GO ID: GO:0009611 with term: response to wounding
+		-GO ID: GO:0006364 with term: rRNA processing
 ---------------------------------------------------------------------
 Network number 15:
-what?? ["at3g45780", "At3g45780", "at1g09340", "At3g63140", "at1g09340", "at3g63140", "At1g09340", "at3g63140"]
+	The interaction of this network is direct between the genes:
+		-AT3G63140 and AT1G09340
 	No pathways have been found in KEGG for the genes in this network.
 	The biological process terms from Gene Ontology associated with these genes are:
-		-GO ID: GO:0009904 with term: chloroplast accumulation movement
-		-GO ID: GO:0009903 with term: chloroplast avoidance movement
+		-GO ID: GO:0009658 with term: chloroplast organization
 		-GO ID: GO:0007623 with term: circadian rhythm
-		-GO ID: GO:0010362 with term: negative regulation of anion channel activity by blue light
-		-GO ID: GO:0009638 with term: phototropism
-		-GO ID: GO:0046777 with term: protein autophosphorylation
-		-GO ID: GO:0006468 with term: protein phosphorylation
-		-GO ID: GO:0018298 with term: protein-chromophore linkage
-		-GO ID: GO:0010155 with term: regulation of proton transport
-		-GO ID: GO:0010119 with term: regulation of stomatal movement
-		-GO ID: GO:0009637 with term: response to blue light
-		-GO ID: GO:0050896 with term: response to stimulus
+		-GO ID: GO:0032544 with term: plastid translation
+		-GO ID: GO:0045893 with term: positive regulation of transcription, DNA-templated
+		-GO ID: GO:0045727 with term: positive regulation of translation
+		-GO ID: GO:0006364 with term: rRNA processing

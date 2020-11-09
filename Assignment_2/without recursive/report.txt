@@ -1,0 +1,754 @@
+|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+|Report file of an analysis to study the possible interaction between predicted co-expressed genes.|
+|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+The number of genes analysed is 168
+To filter the possible networks a MIscore cutoff value of 0.485 has been used, as proposed in this article: ncbi.nlm.nih.gov/pmc/articles/PMC4316181/
+Interactions have been searched at two levels of depth, so they can be direct or indirect. If there are two members in the network it is direct and if there are three it's indirect.
+60 networks have been detected.
+---------------------------------------------------------------------
+Network number 1:
+	The interaction of this network is indirect between the genes:
+		-AT4G37140 and AT5G54270
+		-with intermediary gene AT2G34420
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0009793", "embryo development ending in seed dormancy"] with term: 
+---------------------------------------------------------------------
+Network number 2:
+	The interaction of this network is indirect between the genes:
+		-AT4G33710 and AT2G45170
+		-with intermediary gene AT1G23740
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath04016 with pathway name: MAPK signaling pathway - plant
+		-KEGG ID: ath04075 with pathway name: Plant hormone signal transduction
+		-KEGG ID: ath04626 with pathway name: Plant-pathogen interaction
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0006952", "defense response"] with term: 
+---------------------------------------------------------------------
+Network number 3:
+	The interaction of this network is indirect between the genes:
+		-AT4G13530 and AT1G80440
+		-with intermediary gene AT4G39710
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0006355", "regulation of transcription, DNA-templated"] with term: 
+---------------------------------------------------------------------
+Network number 4:
+	The interaction of this network is indirect between the genes:
+		-AT3G48150 and AT1G03130
+		-with intermediary gene AT3G16250
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0031145 with term: anaphase-promoting complex-dependent catabolic process
+		-GO ID: GO:0051301 with term: cell division
+		-GO ID: GO:0007091 with term: metaphase/anaphase transition of mitotic cell cycle
+		-GO ID: GO:0045842 with term: positive regulation of mitotic metaphase/anaphase transition
+		-GO ID: GO:0016567 with term: protein ubiquitination
+		-GO ID: GO:0031347 with term: regulation of defense response
+		-GO ID: GO:0030071 with term: regulation of mitotic metaphase/anaphase transition
+		-GO ID: GO:0007049 with term: cell cycle
+---------------------------------------------------------------------
+Network number 5:
+	The interaction of this network is indirect between the genes:
+		-AT3G26810 and AT4G17090
+		-with intermediary gene AT4G37800
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009734 with term: auxin-activated signaling pathway
+		-GO ID: GO:0006952 with term: defense response
+		-GO ID: GO:0010152 with term: pollen maturation
+		-GO ID: GO:0016567 with term: protein ubiquitination
+		-GO ID: GO:0031146 with term: SCF-dependent proteasomal ubiquitin-dependent protein catabolic process
+		-GO ID: GO:0048443 with term: stamen development
+		-GO ID: GO:0010089 with term: xylem development
+---------------------------------------------------------------------
+Network number 6:
+	The interaction of this network is indirect between the genes:
+		-AT3G06470 and AT1G23740
+		-with intermediary gene AT2G26080
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0006629 with term: lipid metabolic process
+		-GO ID: GO:0006633 with term: fatty acid biosynthetic process
+		-GO ID: GO:0042761 with term: very long-chain fatty acid biosynthetic process
+		-GO ID: GO:0034625 with term: fatty acid elongation, monounsaturated fatty acid
+		-GO ID: GO:0034626 with term: fatty acid elongation, polyunsaturated fatty acid
+		-GO ID: GO:0019367 with term: fatty acid elongation, saturated fatty acid
+		-GO ID: GO:0030148 with term: sphingolipid biosynthetic process
+---------------------------------------------------------------------
+Network number 7:
+	The interaction of this network is direct between the genes:
+		-AT2G46340 and AT5G15850
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009658 with term: chloroplast organization
+		-GO ID: GO:0010100 with term: negative regulation of photomorphogenesis
+		-GO ID: GO:0009640 with term: photomorphogenesis
+		-GO ID: GO:0010017 with term: red or far-red light signaling pathway
+		-GO ID: GO:0009585 with term: red, far-red light phototransduction
+		-GO ID: GO:2000028 with term: regulation of photoperiodism, flowering
+		-GO ID: GO:0009637 with term: response to blue light
+		-GO ID: GO:0010218 with term: response to far red light
+		-GO ID: GO:0010114 with term: response to red light
+		-GO ID: GO:0048575 with term: short-day photoperiodism, flowering
+---------------------------------------------------------------------
+Network number 8:
+	The interaction of this network is indirect between the genes:
+		-AT5G52640 and AT4G12830
+		-with intermediary gene AT1G23740
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath04141 with pathway name: Protein processing in endoplasmic reticulum
+		-KEGG ID: ath04626 with pathway name: Plant-pathogen interaction
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0034605 with term: cellular response to heat
+		-GO ID: GO:0061077 with term: chaperone-mediated protein folding
+		-GO ID: GO:0009816 with term: defense response to bacterium, incompatible interaction
+		-GO ID: GO:0006457 with term: protein folding
+		-GO ID: GO:0050821 with term: protein stabilization
+---------------------------------------------------------------------
+Network number 9:
+	The interaction of this network is indirect between the genes:
+		-AT4G20360 and AT2G21330
+		-with intermediary gene AT2G26740
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009658 with term: chloroplast organization
+		-GO ID: GO:0048366 with term: leaf development
+		-GO ID: GO:0070125 with term: mitochondrial translational elongation
+		-GO ID: GO:0006414 with term: translational elongation
+		-GO ID: GO:0006421 with term: asparaginyl-tRNA aminoacylation
+---------------------------------------------------------------------
+Network number 10:
+	The interaction of this network is direct between the genes:
+		-AT4G22890 and AT1G20020
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0015979 with term: photosynthesis
+		-GO ID: GO:0009773 with term: photosynthetic electron transport in photosystem I
+---------------------------------------------------------------------
+Network number 11:
+	The interaction of this network is indirect between the genes:
+		-AT5G65430 and AT1G37130
+		-with intermediary gene AT2G18700
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0019222 with term: regulation of metabolic process
+		-GO ID: GO:0050826 with term: response to freezing
+		-GO ID: GO:0009742 with term: brassinosteroid mediated signaling pathway
+		-GO ID: GO:0009409 with term: response to cold
+---------------------------------------------------------------------
+Network number 12:
+	The interaction of this network is indirect between the genes:
+		-AT4G26840 and AT5G65010
+		-with intermediary gene AT3G47340
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0010286 with term: heat acclimation
+		-GO ID: GO:0043433 with term: negative regulation of DNA-binding transcription factor activity
+		-GO ID: GO:0016925 with term: protein sumoylation
+		-GO ID: GO:0009408 with term: response to heat
+---------------------------------------------------------------------
+Network number 13:
+	The interaction of this network is indirect between the genes:
+		-AT5G42980 and AT3G01500
+		-with intermediary gene AT3G50820
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0045454 with term: cell redox homeostasis
+		-GO ID: GO:0050832 with term: defense response to fungus
+		-GO ID: GO:0010286 with term: heat acclimation
+		-GO ID: GO:0051259 with term: protein complex oligomerization
+		-GO ID: GO:0006457 with term: protein folding
+		-GO ID: GO:0009408 with term: response to heat
+		-GO ID: GO:0010188 with term: response to microbial phytotoxin
+---------------------------------------------------------------------
+Network number 14:
+	The interaction of this network is indirect between the genes:
+		-AT3G62870 and AT4G33010
+		-with intermediary gene AT3G54050
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0000470 with term: maturation of LSU-rRNA
+		-GO ID: GO:0042254 with term: ribosome biogenesis
+---------------------------------------------------------------------
+Network number 15:
+	The interaction of this network is indirect between the genes:
+		-AT4G17680 and AT2G17880
+		-with intermediary gene AT4G02770
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0006952 with term: defense response
+		-GO ID: GO:0009873 with term: ethylene-activated signaling pathway
+		-GO ID: GO:0009867 with term: jasmonic acid mediated signaling pathway
+		-GO ID: GO:0031347 with term: regulation of defense response
+		-GO ID: GO:2000022 with term: regulation of jasmonic acid mediated signaling pathway
+		-GO ID: GO:0009611 with term: response to wounding
+---------------------------------------------------------------------
+Network number 16:
+	The interaction of this network is indirect between the genes:
+		-AT1G25320 and AT3G49160
+		-with intermediary gene AT3G28220
+	No pathways have been found in KEGG for the genes in this network.
+	No terms have been found in Gene Ontology for the genes in this network.
+---------------------------------------------------------------------
+Network number 17:
+	The interaction of this network is indirect between the genes:
+		-AT2G33210 and AT4G21210
+		-with intermediary gene AT2G45170
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0006457 with term: protein folding
+		-GO ID: GO:0042026 with term: protein refolding
+---------------------------------------------------------------------
+Network number 18:
+	The interaction of this network is indirect between the genes:
+		-AT5G42980 and AT5G14740
+		-with intermediary gene AT3G50820
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0045454 with term: cell redox homeostasis
+		-GO ID: GO:0050832 with term: defense response to fungus
+		-GO ID: GO:0010286 with term: heat acclimation
+		-GO ID: GO:0051259 with term: protein complex oligomerization
+		-GO ID: GO:0006457 with term: protein folding
+		-GO ID: GO:0009408 with term: response to heat
+		-GO ID: GO:0010188 with term: response to microbial phytotoxin
+---------------------------------------------------------------------
+Network number 19:
+	The interaction of this network is direct between the genes:
+		-AT4G37980 and AT5G04140
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00940 with pathway name: Phenylpropanoid biosynthesis
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+		-KEGG ID: ath01110 with pathway name: Biosynthesis of secondary metabolites
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0010597 with term: green leaf volatile biosynthetic process
+		-GO ID: GO:0009809 with term: lignin biosynthetic process
+		-GO ID: GO:0009617 with term: response to bacterium
+		-GO ID: GO:0055114 with term: oxidation-reduction process
+		-GO ID: GO:0033512 with term: L-lysine catabolic process to acetyl-CoA via saccharopine
+---------------------------------------------------------------------
+Network number 20:
+	The interaction of this network is indirect between the genes:
+		-AT5G42980 and AT2G39730
+		-with intermediary gene AT3G50820
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0045454 with term: cell redox homeostasis
+		-GO ID: GO:0050832 with term: defense response to fungus
+		-GO ID: GO:0010286 with term: heat acclimation
+		-GO ID: GO:0051259 with term: protein complex oligomerization
+		-GO ID: GO:0006457 with term: protein folding
+		-GO ID: GO:0009408 with term: response to heat
+		-GO ID: GO:0010188 with term: response to microbial phytotoxin
+---------------------------------------------------------------------
+Network number 21:
+	The interaction of this network is direct between the genes:
+		-AT1G20020 and AT4G22890
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00195 with pathway name: Photosynthesis
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0042742 with term: defense response to bacterium
+		-GO ID: GO:0009817 with term: defense response to fungus, incompatible interaction
+		-GO ID: GO:0015979 with term: photosynthesis
+		-GO ID: GO:0006260 with term: DNA replication
+---------------------------------------------------------------------
+Network number 22:
+	The interaction of this network is indirect between the genes:
+		-AT3G47620 and AT2G34420
+		-with intermediary gene AT1G29910
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0010229 with term: inflorescence development
+		-GO ID: GO:0031347 with term: regulation of defense response
+		-GO ID: GO:0010029 with term: regulation of seed germination
+		-GO ID: GO:0006355 with term: regulation of transcription, DNA-templated
+		-GO ID: GO:0009737 with term: response to abscisic acid
+		-GO ID: GO:0009735 with term: response to cytokinin
+		-GO ID: GO:0009739 with term: response to gibberellin
+		-GO ID: GO:0007049 with term: cell cycle
+		-GO ID: GO:0015031 with term: protein transport
+---------------------------------------------------------------------
+Network number 23:
+	The interaction of this network is indirect between the genes:
+		-AT3G26810 and AT4G37800
+		-with intermediary gene AT4G17090
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009734 with term: auxin-activated signaling pathway
+		-GO ID: GO:0006952 with term: defense response
+		-GO ID: GO:0010152 with term: pollen maturation
+		-GO ID: GO:0016567 with term: protein ubiquitination
+		-GO ID: GO:0031146 with term: SCF-dependent proteasomal ubiquitin-dependent protein catabolic process
+		-GO ID: GO:0048443 with term: stamen development
+		-GO ID: GO:0010089 with term: xylem development
+---------------------------------------------------------------------
+Network number 24:
+	The interaction of this network is indirect between the genes:
+		-AT1G44820 and AT1G12900
+		-with intermediary gene AT3G45780
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00220 with pathway name: Arginine biosynthesis
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+		-KEGG ID: ath01110 with pathway name: Biosynthesis of secondary metabolites
+		-KEGG ID: ath01210 with pathway name: 2-Oxocarboxylic acid metabolism
+		-KEGG ID: ath01230 with pathway name: Biosynthesis of amino acids
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0006520", "cellular amino acid metabolic process"] with term: 
+---------------------------------------------------------------------
+Network number 25:
+	The interaction of this network is indirect between the genes:
+		-AT5G42980 and AT3G55800
+		-with intermediary gene AT3G50820
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0045454 with term: cell redox homeostasis
+		-GO ID: GO:0050832 with term: defense response to fungus
+		-GO ID: GO:0010286 with term: heat acclimation
+		-GO ID: GO:0051259 with term: protein complex oligomerization
+		-GO ID: GO:0006457 with term: protein folding
+		-GO ID: GO:0009408 with term: response to heat
+		-GO ID: GO:0010188 with term: response to microbial phytotoxin
+---------------------------------------------------------------------
+Network number 26:
+	The interaction of this network is direct between the genes:
+		-AT5G15850 and AT2G46340
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009909 with term: regulation of flower development
+		-GO ID: GO:0000398 with term: mRNA splicing, via spliceosome
+---------------------------------------------------------------------
+Network number 27:
+	The interaction of this network is indirect between the genes:
+		-AT1G10210 and AT5G17300
+		-with intermediary gene AT3G45780
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009734 with term: auxin-activated signaling pathway
+		-GO ID: GO:0035556 with term: intracellular signal transduction
+		-GO ID: GO:0010468 with term: regulation of gene expression
+---------------------------------------------------------------------
+Network number 28:
+	The interaction of this network is indirect between the genes:
+		-AT5G12980 and AT3G27690
+		-with intermediary gene AT5G54270
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0017148", "negative regulation of translation"] with term: 
+---------------------------------------------------------------------
+Network number 29:
+	The interaction of this network is indirect between the genes:
+		-AT5G38890 and AT2G26080
+		-with intermediary gene AT3G45780
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0006396", "RNA processing"] with term: 
+---------------------------------------------------------------------
+Network number 30:
+	The interaction of this network is indirect between the genes:
+		-AT1G26830 and AT3G48360
+		-with intermediary gene AT4G37610
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009911 with term: positive regulation of flower development
+		-GO ID: GO:0016567 with term: protein ubiquitination
+		-GO ID: GO:0009639 with term: response to red or far red light
+		-GO ID: GO:0006511 with term: ubiquitin-dependent protein catabolic process
+		-GO ID: GO:0006355 with term: regulation of transcription, DNA-templated
+---------------------------------------------------------------------
+Network number 31:
+	The interaction of this network is indirect between the genes:
+		-AT5G19320 and AT1G61520
+		-with intermediary gene AT1G12900
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0006913", "nucleocytoplasmic transport"] with term: 
+---------------------------------------------------------------------
+Network number 32:
+	The interaction of this network is indirect between the genes:
+		-AT2G01570 and AT2G43010
+		-with intermediary gene AT3G16250
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009740 with term: gibberellic acid mediated signaling pathway
+		-GO ID: GO:0042538 with term: hyperosmotic salinity response
+		-GO ID: GO:0009867 with term: jasmonic acid mediated signaling pathway
+		-GO ID: GO:0033206 with term: meiotic cytokinesis
+		-GO ID: GO:0007275 with term: multicellular organism development
+		-GO ID: GO:1905614 with term: negative regulation of developmental vegetative growth
+		-GO ID: GO:0009938 with term: negative regulation of gibberellic acid mediated signaling pathway
+		-GO ID: GO:1905622 with term: negative regulation of leaf development
+		-GO ID: GO:0010187 with term: negative regulation of seed germination
+		-GO ID: GO:1900033 with term: negative regulation of trichome patterning
+		-GO ID: GO:0010628 with term: positive regulation of gene expression
+		-GO ID: GO:0045893 with term: positive regulation of transcription, DNA-templated
+		-GO ID: GO:0042176 with term: regulation of protein catabolic process
+		-GO ID: GO:2000377 with term: regulation of reactive oxygen species metabolic process
+		-GO ID: GO:2000033 with term: regulation of seed dormancy process
+		-GO ID: GO:0010029 with term: regulation of seed germination
+		-GO ID: GO:0006355 with term: regulation of transcription, DNA-templated
+		-GO ID: GO:0009737 with term: response to abscisic acid
+		-GO ID: GO:0009723 with term: response to ethylene
+		-GO ID: GO:0010218 with term: response to far red light
+		-GO ID: GO:0009739 with term: response to gibberellin
+		-GO ID: GO:0009863 with term: salicylic acid mediated signaling pathway
+---------------------------------------------------------------------
+Network number 33:
+	The interaction of this network is indirect between the genes:
+		-AT3G15710 and AT3G28220
+		-with intermediary gene AT2G47930
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0006465", "signal peptide processing"] with term: 
+---------------------------------------------------------------------
+Network number 34:
+	The interaction of this network is indirect between the genes:
+		-AT1G12820 and AT2G26740
+		-with intermediary gene AT4G17090
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009734 with term: auxin-activated signaling pathway
+		-GO ID: GO:0071249 with term: cellular response to nitrate
+		-GO ID: GO:0006952 with term: defense response
+		-GO ID: GO:0048527 with term: lateral root development
+		-GO ID: GO:0010152 with term: pollen maturation
+		-GO ID: GO:0080022 with term: primary root development
+		-GO ID: GO:0016567 with term: protein ubiquitination
+		-GO ID: GO:0031146 with term: SCF-dependent proteasomal ubiquitin-dependent protein catabolic process
+		-GO ID: GO:0048443 with term: stamen development
+---------------------------------------------------------------------
+Network number 35:
+	The interaction of this network is indirect between the genes:
+		-AT3G62870 and AT3G54050
+		-with intermediary gene AT1G68570
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0000470 with term: maturation of LSU-rRNA
+		-GO ID: GO:0042254 with term: ribosome biogenesis
+---------------------------------------------------------------------
+Network number 36:
+	The interaction of this network is indirect between the genes:
+		-AT2G23070 and AT2G18700
+		-with intermediary gene AT5G14740
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath03008 with pathway name: Ribosome biogenesis in eukaryotes
+		-KEGG ID: ath04712 with pathway name: Circadian rhythm - plant
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0071215 with term: cellular response to abscisic acid stimulus
+		-GO ID: GO:0010019 with term: chloroplast-nucleus signaling pathway
+		-GO ID: GO:0010187 with term: negative regulation of seed germination
+		-GO ID: GO:0018105 with term: peptidyl-serine phosphorylation
+		-GO ID: GO:0018107 with term: peptidyl-threonine phosphorylation
+		-GO ID: GO:0051726 with term: regulation of cell cycle
+		-GO ID: GO:0040008 with term: regulation of growth
+		-GO ID: GO:2000028 with term: regulation of photoperiodism, flowering
+---------------------------------------------------------------------
+Network number 37:
+	The interaction of this network is indirect between the genes:
+		-AT1G44820 and AT3G45780
+		-with intermediary gene AT1G12900
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00220 with pathway name: Arginine biosynthesis
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+		-KEGG ID: ath01110 with pathway name: Biosynthesis of secondary metabolites
+		-KEGG ID: ath01210 with pathway name: 2-Oxocarboxylic acid metabolism
+		-KEGG ID: ath01230 with pathway name: Biosynthesis of amino acids
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0006520", "cellular amino acid metabolic process"] with term: 
+---------------------------------------------------------------------
+Network number 38:
+	The interaction of this network is indirect between the genes:
+		-AT3G62870 and AT1G68570
+		-with intermediary gene AT3G54050
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0000470 with term: maturation of LSU-rRNA
+		-GO ID: GO:0042254 with term: ribosome biogenesis
+---------------------------------------------------------------------
+Network number 39:
+	The interaction of this network is indirect between the genes:
+		-AT1G22920 and AT2G30950
+		-with intermediary gene AT3G16250
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0010387 with term: COP9 signalosome assembly
+		-GO ID: GO:0010100 with term: negative regulation of photomorphogenesis
+		-GO ID: GO:0010971 with term: positive regulation of G2/M transition of mitotic cell cycle
+		-GO ID: GO:0000338 with term: protein deneddylation
+		-GO ID: GO:0009585 with term: red, far-red light phototransduction
+		-GO ID: GO:0031347 with term: regulation of defense response
+		-GO ID: GO:0009733 with term: response to auxin
+		-GO ID: GO:0010093 with term: specification of floral organ identity
+---------------------------------------------------------------------
+Network number 40:
+	The interaction of this network is indirect between the genes:
+		-AT5G42980 and AT3G62410
+		-with intermediary gene AT3G50820
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0045454 with term: cell redox homeostasis
+		-GO ID: GO:0050832 with term: defense response to fungus
+		-GO ID: GO:0010286 with term: heat acclimation
+		-GO ID: GO:0051259 with term: protein complex oligomerization
+		-GO ID: GO:0006457 with term: protein folding
+		-GO ID: GO:0009408 with term: response to heat
+		-GO ID: GO:0010188 with term: response to microbial phytotoxin
+---------------------------------------------------------------------
+Network number 41:
+	The interaction of this network is indirect between the genes:
+		-AT1G22920 and AT3G16250
+		-with intermediary gene AT2G30950
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0010387 with term: COP9 signalosome assembly
+		-GO ID: GO:0010100 with term: negative regulation of photomorphogenesis
+		-GO ID: GO:0010971 with term: positive regulation of G2/M transition of mitotic cell cycle
+		-GO ID: GO:0000338 with term: protein deneddylation
+		-GO ID: GO:0009585 with term: red, far-red light phototransduction
+		-GO ID: GO:0031347 with term: regulation of defense response
+		-GO ID: GO:0009733 with term: response to auxin
+		-GO ID: GO:0010093 with term: specification of floral organ identity
+---------------------------------------------------------------------
+Network number 42:
+	The interaction of this network is direct between the genes:
+		-AT1G09340 and AT3G63140
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0042631 with term: cellular response to water deprivation
+		-GO ID: GO:0009658 with term: chloroplast organization
+		-GO ID: GO:0007623 with term: circadian rhythm
+		-GO ID: GO:0042742 with term: defense response to bacterium
+		-GO ID: GO:0005996 with term: monosaccharide metabolic process
+		-GO ID: GO:0032544 with term: plastid translation
+		-GO ID: GO:0000272 with term: polysaccharide catabolic process
+		-GO ID: GO:0045893 with term: positive regulation of transcription, DNA-templated
+		-GO ID: GO:0045727 with term: positive regulation of translation
+		-GO ID: GO:0010468 with term: regulation of gene expression
+		-GO ID: GO:0009409 with term: response to cold
+		-GO ID: GO:0009611 with term: response to wounding
+		-GO ID: GO:0006364 with term: rRNA processing
+---------------------------------------------------------------------
+Network number 43:
+	The interaction of this network is direct between the genes:
+		-AT3G63140 and AT1G09340
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009658 with term: chloroplast organization
+		-GO ID: GO:0007623 with term: circadian rhythm
+		-GO ID: GO:0032544 with term: plastid translation
+		-GO ID: GO:0045893 with term: positive regulation of transcription, DNA-templated
+		-GO ID: GO:0045727 with term: positive regulation of translation
+		-GO ID: GO:0006364 with term: rRNA processing
+---------------------------------------------------------------------
+Network number 44:
+	The interaction of this network is indirect between the genes:
+		-AT4G26840 and AT3G47340
+		-with intermediary gene AT5G65010
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0010286 with term: heat acclimation
+		-GO ID: GO:0043433 with term: negative regulation of DNA-binding transcription factor activity
+		-GO ID: GO:0016925 with term: protein sumoylation
+		-GO ID: GO:0009408 with term: response to heat
+---------------------------------------------------------------------
+Network number 45:
+	The interaction of this network is indirect between the genes:
+		-AT5G42980 and AT5G35630
+		-with intermediary gene AT3G50820
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0045454 with term: cell redox homeostasis
+		-GO ID: GO:0050832 with term: defense response to fungus
+		-GO ID: GO:0010286 with term: heat acclimation
+		-GO ID: GO:0051259 with term: protein complex oligomerization
+		-GO ID: GO:0006457 with term: protein folding
+		-GO ID: GO:0009408 with term: response to heat
+		-GO ID: GO:0010188 with term: response to microbial phytotoxin
+---------------------------------------------------------------------
+Network number 46:
+	The interaction of this network is indirect between the genes:
+		-AT3G47620 and AT1G29910
+		-with intermediary gene AT2G34420
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0010229 with term: inflorescence development
+		-GO ID: GO:0031347 with term: regulation of defense response
+		-GO ID: GO:0010029 with term: regulation of seed germination
+		-GO ID: GO:0006355 with term: regulation of transcription, DNA-templated
+		-GO ID: GO:0009737 with term: response to abscisic acid
+		-GO ID: GO:0009735 with term: response to cytokinin
+		-GO ID: GO:0009739 with term: response to gibberellin
+		-GO ID: GO:0007049 with term: cell cycle
+		-GO ID: GO:0015031 with term: protein transport
+---------------------------------------------------------------------
+Network number 47:
+	The interaction of this network is indirect between the genes:
+		-AT1G17280 and AT1G69870
+		-with intermediary gene AT5G38990
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath04120 with pathway name: Ubiquitin mediated proteolysis
+		-KEGG ID: ath04141 with pathway name: Protein processing in endoplasmic reticulum
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0042631 with term: cellular response to water deprivation
+		-GO ID: GO:1902457 with term: negative regulation of stomatal opening
+		-GO ID: GO:0000209 with term: protein polyubiquitination
+		-GO ID: GO:0030433 with term: ubiquitin-dependent ERAD pathway
+		-GO ID: GO:0006511 with term: ubiquitin-dependent protein catabolic process
+---------------------------------------------------------------------
+Network number 48:
+	The interaction of this network is indirect between the genes:
+		-AT3G15710 and AT2G47930
+		-with intermediary gene AT3G28220
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0006465", "signal peptide processing"] with term: 
+---------------------------------------------------------------------
+Network number 49:
+	The interaction of this network is indirect between the genes:
+		-AT3G46890 and AT5G43750
+		-with intermediary gene AT3G28220
+	No pathways have been found in KEGG for the genes in this network.
+	No terms have been found in Gene Ontology for the genes in this network.
+---------------------------------------------------------------------
+Network number 50:
+	The interaction of this network is indirect between the genes:
+		-AT5G42980 and AT3G50820
+		-with intermediary gene AT3G01500
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0045454 with term: cell redox homeostasis
+		-GO ID: GO:0050832 with term: defense response to fungus
+		-GO ID: GO:0010286 with term: heat acclimation
+		-GO ID: GO:0051259 with term: protein complex oligomerization
+		-GO ID: GO:0006457 with term: protein folding
+		-GO ID: GO:0009408 with term: response to heat
+		-GO ID: GO:0010188 with term: response to microbial phytotoxin
+---------------------------------------------------------------------
+Network number 51:
+	The interaction of this network is indirect between the genes:
+		-AT1G26830 and AT4G37610
+		-with intermediary gene AT3G48360
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009911 with term: positive regulation of flower development
+		-GO ID: GO:0016567 with term: protein ubiquitination
+		-GO ID: GO:0009639 with term: response to red or far red light
+		-GO ID: GO:0006511 with term: ubiquitin-dependent protein catabolic process
+		-GO ID: GO:0006355 with term: regulation of transcription, DNA-templated
+---------------------------------------------------------------------
+Network number 52:
+	The interaction of this network is indirect between the genes:
+		-AT1G21240 and AT3G61260
+		-with intermediary gene AT4G22890
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0007166 with term: cell surface receptor signaling pathway
+		-GO ID: GO:0006468 with term: protein phosphorylation
+---------------------------------------------------------------------
+Network number 53:
+	The interaction of this network is indirect between the genes:
+		-AT2G26180 and AT5G38990
+		-with intermediary gene AT3G61260
+	No pathways have been found in KEGG for the genes in this network.
+	No terms have been found in Gene Ontology for the genes in this network.
+---------------------------------------------------------------------
+Network number 54:
+	The interaction of this network is indirect between the genes:
+		-AT3G47620 and AT1G29920
+		-with intermediary gene AT1G29910
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0010229 with term: inflorescence development
+		-GO ID: GO:0031347 with term: regulation of defense response
+		-GO ID: GO:0010029 with term: regulation of seed germination
+		-GO ID: GO:0006355 with term: regulation of transcription, DNA-templated
+		-GO ID: GO:0009737 with term: response to abscisic acid
+		-GO ID: GO:0009735 with term: response to cytokinin
+		-GO ID: GO:0009739 with term: response to gibberellin
+		-GO ID: GO:0007049 with term: cell cycle
+		-GO ID: GO:0015031 with term: protein transport
+---------------------------------------------------------------------
+Network number 55:
+	The interaction of this network is direct between the genes:
+		-AT4G02770 and AT4G22890
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00195 with pathway name: Photosynthesis
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0015979 with term: photosynthesis
+		-GO ID: GO:0035556 with term: intracellular signal transduction
+---------------------------------------------------------------------
+Network number 56:
+	The interaction of this network is indirect between the genes:
+		-AT4G13530 and AT4G39710
+		-with intermediary gene AT1G80440
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: ["GO:0006355", "regulation of transcription, DNA-templated"] with term: 
+---------------------------------------------------------------------
+Network number 57:
+	The interaction of this network is indirect between the genes:
+		-AT3G17240 and AT5G48300
+		-with intermediary gene AT2G26740
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00010 with pathway name: Glycolysis / Gluconeogenesis
+		-KEGG ID: ath00020 with pathway name: Citrate cycle (TCA cycle)
+		-KEGG ID: ath00260 with pathway name: Glycine, serine and threonine metabolism
+		-KEGG ID: ath00280 with pathway name: Valine, leucine and isoleucine degradation
+		-KEGG ID: ath00310 with pathway name: Lysine degradation
+		-KEGG ID: ath00380 with pathway name: Tryptophan metabolism
+		-KEGG ID: ath00620 with pathway name: Pyruvate metabolism
+		-KEGG ID: ath00630 with pathway name: Glyoxylate and dicarboxylate metabolism
+		-KEGG ID: ath00640 with pathway name: Propanoate metabolism
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+		-KEGG ID: ath01110 with pathway name: Biosynthesis of secondary metabolites
+		-KEGG ID: ath01200 with pathway name: Carbon metabolism
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0045454 with term: cell redox homeostasis
+		-GO ID: GO:0055114 with term: oxidation-reduction process
+		-GO ID: GO:0046686 with term: response to cadmium ion
+---------------------------------------------------------------------
+Network number 58:
+	The interaction of this network is indirect between the genes:
+		-AT2G02950 and AT1G14280
+		-with intermediary gene AT3G45780
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009638 with term: phototropism
+		-GO ID: GO:0009958 with term: positive gravitropism
+		-GO ID: GO:0010017 with term: red or far-red light signaling pathway
+		-GO ID: GO:0009585 with term: red, far-red light phototransduction
+		-GO ID: GO:0010218 with term: response to far red light
+		-GO ID: GO:0010114 with term: response to red light
+---------------------------------------------------------------------
+Network number 59:
+	The interaction of this network is indirect between the genes:
+		-AT3G53900 and AT4G09010
+		-with intermediary gene AT3G16250
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00240 with pathway name: Pyrimidine metabolism
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0016036 with term: cellular response to phosphate starvation
+		-GO ID: GO:0032502 with term: developmental process
+		-GO ID: GO:0009116 with term: nucleoside metabolic process
+		-GO ID: GO:0044206 with term: UMP salvage
+		-GO ID: GO:0006223 with term: uracil salvage
+		-GO ID: GO:0019252 with term: starch biosynthetic process
+---------------------------------------------------------------------
+Network number 60:
+	The interaction of this network is indirect between the genes:
+		-AT3G26090 and AT5G01530
+		-with intermediary gene AT2G34420
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009867 with term: jasmonic acid mediated signaling pathway
+		-GO ID: GO:0009968 with term: negative regulation of signal transduction
+		-GO ID: GO:0043547 with term: positive regulation of GTPase activity
+		-GO ID: GO:0042127 with term: regulation of cell population proliferation
+		-GO ID: GO:0009737 with term: response to abscisic acid
+		-GO ID: GO:0009749 with term: response to glucose
+		-GO ID: GO:0009414 with term: response to water deprivation
+		-GO ID: GO:0010182 with term: sugar mediated signaling pathway
+		-GO ID: GO:0006355 with term: regulation of transcription, DNA-templated
