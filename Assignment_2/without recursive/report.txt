@@ -4,7 +4,7 @@
 The number of genes analysed is 168
 To filter the possible networks a MIscore cutoff value of 0.485 has been used, as proposed in this article: ncbi.nlm.nih.gov/pmc/articles/PMC4316181/
 Interactions have been searched at two levels of depth, so they can be direct or indirect. If there are two members in the network it is direct and if there are three it's indirect.
-60 networks have been detected.
+62 networks have been detected.
 ---------------------------------------------------------------------
 Network number 1:
 	The interaction of this network is indirect between the genes:
@@ -34,6 +34,38 @@ Network number 3:
 		-GO ID: ["GO:0006355", "regulation of transcription, DNA-templated"] with term: 
 ---------------------------------------------------------------------
 Network number 4:
+	The interaction of this network is direct between the genes:
+		-AT5G04140 and AT4G37980
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00630 with pathway name: Glyoxylate and dicarboxylate metabolism
+		-KEGG ID: ath00910 with pathway name: Nitrogen metabolism
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0019676 with term: ammonia assimilation cycle
+		-GO ID: GO:0006537 with term: glutamate biosynthetic process
+		-GO ID: GO:0097054 with term: L-glutamate biosynthetic process
+		-GO ID: GO:0009853 with term: photorespiration
+		-GO ID: GO:0080114 with term: positive regulation of glycine hydroxymethyltransferase activity
+		-GO ID: GO:0009416 with term: response to light stimulus
+		-GO ID: GO:0009744 with term: response to sucrose
+		-GO ID: GO:0006541 with term: glutamine metabolic process
+---------------------------------------------------------------------
+Network number 5:
+	The interaction of this network is indirect between the genes:
+		-AT3G26090 and AT1G15820
+		-with intermediary gene AT5G01530
+	No pathways have been found in KEGG for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009867 with term: jasmonic acid mediated signaling pathway
+		-GO ID: GO:0009968 with term: negative regulation of signal transduction
+		-GO ID: GO:0043547 with term: positive regulation of GTPase activity
+		-GO ID: GO:0042127 with term: regulation of cell population proliferation
+		-GO ID: GO:0009737 with term: response to abscisic acid
+		-GO ID: GO:0009749 with term: response to glucose
+		-GO ID: GO:0009414 with term: response to water deprivation
+		-GO ID: GO:0010182 with term: sugar mediated signaling pathway
+		-GO ID: GO:0006355 with term: regulation of transcription, DNA-templated
+---------------------------------------------------------------------
+Network number 6:
 	The interaction of this network is indirect between the genes:
 		-AT3G48150 and AT1G03130
 		-with intermediary gene AT3G16250
@@ -48,7 +80,7 @@ Network number 4:
 		-GO ID: GO:0030071 with term: regulation of mitotic metaphase/anaphase transition
 		-GO ID: GO:0007049 with term: cell cycle
 ---------------------------------------------------------------------
-Network number 5:
+Network number 7:
 	The interaction of this network is indirect between the genes:
 		-AT3G26810 and AT4G17090
 		-with intermediary gene AT4G37800
@@ -62,7 +94,7 @@ Network number 5:
 		-GO ID: GO:0048443 with term: stamen development
 		-GO ID: GO:0010089 with term: xylem development
 ---------------------------------------------------------------------
-Network number 6:
+Network number 8:
 	The interaction of this network is indirect between the genes:
 		-AT3G06470 and AT1G23740
 		-with intermediary gene AT2G26080
@@ -76,7 +108,7 @@ Network number 6:
 		-GO ID: GO:0019367 with term: fatty acid elongation, saturated fatty acid
 		-GO ID: GO:0030148 with term: sphingolipid biosynthetic process
 ---------------------------------------------------------------------
-Network number 7:
+Network number 9:
 	The interaction of this network is direct between the genes:
 		-AT2G46340 and AT5G15850
 	No pathways have been found in KEGG for the genes in this network.
@@ -92,7 +124,7 @@ Network number 7:
 		-GO ID: GO:0010114 with term: response to red light
 		-GO ID: GO:0048575 with term: short-day photoperiodism, flowering
 ---------------------------------------------------------------------
-Network number 8:
+Network number 10:
 	The interaction of this network is indirect between the genes:
 		-AT5G52640 and AT4G12830
 		-with intermediary gene AT1G23740
@@ -106,7 +138,7 @@ Network number 8:
 		-GO ID: GO:0006457 with term: protein folding
 		-GO ID: GO:0050821 with term: protein stabilization
 ---------------------------------------------------------------------
-Network number 9:
+Network number 11:
 	The interaction of this network is indirect between the genes:
 		-AT4G20360 and AT2G21330
 		-with intermediary gene AT2G26740
@@ -118,7 +150,7 @@ Network number 9:
 		-GO ID: GO:0006414 with term: translational elongation
 		-GO ID: GO:0006421 with term: asparaginyl-tRNA aminoacylation
 ---------------------------------------------------------------------
-Network number 10:
+Network number 12:
 	The interaction of this network is direct between the genes:
 		-AT4G22890 and AT1G20020
 	No pathways have been found in KEGG for the genes in this network.
@@ -126,7 +158,7 @@ Network number 10:
 		-GO ID: GO:0015979 with term: photosynthesis
 		-GO ID: GO:0009773 with term: photosynthetic electron transport in photosystem I
 ---------------------------------------------------------------------
-Network number 11:
+Network number 13:
 	The interaction of this network is indirect between the genes:
 		-AT5G65430 and AT1G37130
 		-with intermediary gene AT2G18700
@@ -137,7 +169,7 @@ Network number 11:
 		-GO ID: GO:0009742 with term: brassinosteroid mediated signaling pathway
 		-GO ID: GO:0009409 with term: response to cold
 ---------------------------------------------------------------------
-Network number 12:
+Network number 14:
 	The interaction of this network is indirect between the genes:
 		-AT4G26840 and AT5G65010
 		-with intermediary gene AT3G47340
@@ -148,7 +180,7 @@ Network number 12:
 		-GO ID: GO:0016925 with term: protein sumoylation
 		-GO ID: GO:0009408 with term: response to heat
 ---------------------------------------------------------------------
-Network number 13:
+Network number 15:
 	The interaction of this network is indirect between the genes:
 		-AT5G42980 and AT3G01500
 		-with intermediary gene AT3G50820
@@ -162,7 +194,7 @@ Network number 13:
 		-GO ID: GO:0009408 with term: response to heat
 		-GO ID: GO:0010188 with term: response to microbial phytotoxin
 ---------------------------------------------------------------------
-Network number 14:
+Network number 16:
 	The interaction of this network is indirect between the genes:
 		-AT3G62870 and AT4G33010
 		-with intermediary gene AT3G54050
@@ -171,7 +203,7 @@ Network number 14:
 		-GO ID: GO:0000470 with term: maturation of LSU-rRNA
 		-GO ID: GO:0042254 with term: ribosome biogenesis
 ---------------------------------------------------------------------
-Network number 15:
+Network number 17:
 	The interaction of this network is indirect between the genes:
 		-AT4G17680 and AT2G17880
 		-with intermediary gene AT4G02770
@@ -184,14 +216,14 @@ Network number 15:
 		-GO ID: GO:2000022 with term: regulation of jasmonic acid mediated signaling pathway
 		-GO ID: GO:0009611 with term: response to wounding
 ---------------------------------------------------------------------
-Network number 16:
+Network number 18:
 	The interaction of this network is indirect between the genes:
 		-AT1G25320 and AT3G49160
 		-with intermediary gene AT3G28220
 	No pathways have been found in KEGG for the genes in this network.
 	No terms have been found in Gene Ontology for the genes in this network.
 ---------------------------------------------------------------------
-Network number 17:
+Network number 19:
 	The interaction of this network is indirect between the genes:
 		-AT2G33210 and AT4G21210
 		-with intermediary gene AT2G45170
@@ -200,7 +232,7 @@ Network number 17:
 		-GO ID: GO:0006457 with term: protein folding
 		-GO ID: GO:0042026 with term: protein refolding
 ---------------------------------------------------------------------
-Network number 18:
+Network number 20:
 	The interaction of this network is indirect between the genes:
 		-AT5G42980 and AT5G14740
 		-with intermediary gene AT3G50820
@@ -214,7 +246,7 @@ Network number 18:
 		-GO ID: GO:0009408 with term: response to heat
 		-GO ID: GO:0010188 with term: response to microbial phytotoxin
 ---------------------------------------------------------------------
-Network number 19:
+Network number 21:
 	The interaction of this network is direct between the genes:
 		-AT4G37980 and AT5G04140
 	The following pathways have been found in KEGG for the genes in this network:
@@ -228,7 +260,7 @@ Network number 19:
 		-GO ID: GO:0055114 with term: oxidation-reduction process
 		-GO ID: GO:0033512 with term: L-lysine catabolic process to acetyl-CoA via saccharopine
 ---------------------------------------------------------------------
-Network number 20:
+Network number 22:
 	The interaction of this network is indirect between the genes:
 		-AT5G42980 and AT2G39730
 		-with intermediary gene AT3G50820
@@ -242,7 +274,7 @@ Network number 20:
 		-GO ID: GO:0009408 with term: response to heat
 		-GO ID: GO:0010188 with term: response to microbial phytotoxin
 ---------------------------------------------------------------------
-Network number 21:
+Network number 23:
 	The interaction of this network is direct between the genes:
 		-AT1G20020 and AT4G22890
 	The following pathways have been found in KEGG for the genes in this network:
@@ -254,7 +286,7 @@ Network number 21:
 		-GO ID: GO:0015979 with term: photosynthesis
 		-GO ID: GO:0006260 with term: DNA replication
 ---------------------------------------------------------------------
-Network number 22:
+Network number 24:
 	The interaction of this network is indirect between the genes:
 		-AT3G47620 and AT2G34420
 		-with intermediary gene AT1G29910
@@ -270,7 +302,7 @@ Network number 22:
 		-GO ID: GO:0007049 with term: cell cycle
 		-GO ID: GO:0015031 with term: protein transport
 ---------------------------------------------------------------------
-Network number 23:
+Network number 25:
 	The interaction of this network is indirect between the genes:
 		-AT3G26810 and AT4G37800
 		-with intermediary gene AT4G17090
@@ -284,7 +316,7 @@ Network number 23:
 		-GO ID: GO:0048443 with term: stamen development
 		-GO ID: GO:0010089 with term: xylem development
 ---------------------------------------------------------------------
-Network number 24:
+Network number 26:
 	The interaction of this network is indirect between the genes:
 		-AT1G44820 and AT1G12900
 		-with intermediary gene AT3G45780
@@ -297,7 +329,7 @@ Network number 24:
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0006520", "cellular amino acid metabolic process"] with term: 
 ---------------------------------------------------------------------
-Network number 25:
+Network number 27:
 	The interaction of this network is indirect between the genes:
 		-AT5G42980 and AT3G55800
 		-with intermediary gene AT3G50820
@@ -311,7 +343,7 @@ Network number 25:
 		-GO ID: GO:0009408 with term: response to heat
 		-GO ID: GO:0010188 with term: response to microbial phytotoxin
 ---------------------------------------------------------------------
-Network number 26:
+Network number 28:
 	The interaction of this network is direct between the genes:
 		-AT5G15850 and AT2G46340
 	No pathways have been found in KEGG for the genes in this network.
@@ -319,7 +351,7 @@ Network number 26:
 		-GO ID: GO:0009909 with term: regulation of flower development
 		-GO ID: GO:0000398 with term: mRNA splicing, via spliceosome
 ---------------------------------------------------------------------
-Network number 27:
+Network number 29:
 	The interaction of this network is indirect between the genes:
 		-AT1G10210 and AT5G17300
 		-with intermediary gene AT3G45780
@@ -329,7 +361,7 @@ Network number 27:
 		-GO ID: GO:0035556 with term: intracellular signal transduction
 		-GO ID: GO:0010468 with term: regulation of gene expression
 ---------------------------------------------------------------------
-Network number 28:
+Network number 30:
 	The interaction of this network is indirect between the genes:
 		-AT5G12980 and AT3G27690
 		-with intermediary gene AT5G54270
@@ -337,7 +369,7 @@ Network number 28:
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0017148", "negative regulation of translation"] with term: 
 ---------------------------------------------------------------------
-Network number 29:
+Network number 31:
 	The interaction of this network is indirect between the genes:
 		-AT5G38890 and AT2G26080
 		-with intermediary gene AT3G45780
@@ -345,7 +377,7 @@ Network number 29:
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0006396", "RNA processing"] with term: 
 ---------------------------------------------------------------------
-Network number 30:
+Network number 32:
 	The interaction of this network is indirect between the genes:
 		-AT1G26830 and AT3G48360
 		-with intermediary gene AT4G37610
@@ -357,7 +389,7 @@ Network number 30:
 		-GO ID: GO:0006511 with term: ubiquitin-dependent protein catabolic process
 		-GO ID: GO:0006355 with term: regulation of transcription, DNA-templated
 ---------------------------------------------------------------------
-Network number 31:
+Network number 33:
 	The interaction of this network is indirect between the genes:
 		-AT5G19320 and AT1G61520
 		-with intermediary gene AT1G12900
@@ -365,7 +397,7 @@ Network number 31:
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0006913", "nucleocytoplasmic transport"] with term: 
 ---------------------------------------------------------------------
-Network number 32:
+Network number 34:
 	The interaction of this network is indirect between the genes:
 		-AT2G01570 and AT2G43010
 		-with intermediary gene AT3G16250
@@ -394,7 +426,7 @@ Network number 32:
 		-GO ID: GO:0009739 with term: response to gibberellin
 		-GO ID: GO:0009863 with term: salicylic acid mediated signaling pathway
 ---------------------------------------------------------------------
-Network number 33:
+Network number 35:
 	The interaction of this network is indirect between the genes:
 		-AT3G15710 and AT3G28220
 		-with intermediary gene AT2G47930
@@ -402,7 +434,7 @@ Network number 33:
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0006465", "signal peptide processing"] with term: 
 ---------------------------------------------------------------------
-Network number 34:
+Network number 36:
 	The interaction of this network is indirect between the genes:
 		-AT1G12820 and AT2G26740
 		-with intermediary gene AT4G17090
@@ -418,7 +450,7 @@ Network number 34:
 		-GO ID: GO:0031146 with term: SCF-dependent proteasomal ubiquitin-dependent protein catabolic process
 		-GO ID: GO:0048443 with term: stamen development
 ---------------------------------------------------------------------
-Network number 35:
+Network number 37:
 	The interaction of this network is indirect between the genes:
 		-AT3G62870 and AT3G54050
 		-with intermediary gene AT1G68570
@@ -427,7 +459,7 @@ Network number 35:
 		-GO ID: GO:0000470 with term: maturation of LSU-rRNA
 		-GO ID: GO:0042254 with term: ribosome biogenesis
 ---------------------------------------------------------------------
-Network number 36:
+Network number 38:
 	The interaction of this network is indirect between the genes:
 		-AT2G23070 and AT2G18700
 		-with intermediary gene AT5G14740
@@ -444,7 +476,7 @@ Network number 36:
 		-GO ID: GO:0040008 with term: regulation of growth
 		-GO ID: GO:2000028 with term: regulation of photoperiodism, flowering
 ---------------------------------------------------------------------
-Network number 37:
+Network number 39:
 	The interaction of this network is indirect between the genes:
 		-AT1G44820 and AT3G45780
 		-with intermediary gene AT1G12900
@@ -457,7 +489,7 @@ Network number 37:
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0006520", "cellular amino acid metabolic process"] with term: 
 ---------------------------------------------------------------------
-Network number 38:
+Network number 40:
 	The interaction of this network is indirect between the genes:
 		-AT3G62870 and AT1G68570
 		-with intermediary gene AT3G54050
@@ -466,7 +498,7 @@ Network number 38:
 		-GO ID: GO:0000470 with term: maturation of LSU-rRNA
 		-GO ID: GO:0042254 with term: ribosome biogenesis
 ---------------------------------------------------------------------
-Network number 39:
+Network number 41:
 	The interaction of this network is indirect between the genes:
 		-AT1G22920 and AT2G30950
 		-with intermediary gene AT3G16250
@@ -481,7 +513,7 @@ Network number 39:
 		-GO ID: GO:0009733 with term: response to auxin
 		-GO ID: GO:0010093 with term: specification of floral organ identity
 ---------------------------------------------------------------------
-Network number 40:
+Network number 42:
 	The interaction of this network is indirect between the genes:
 		-AT5G42980 and AT3G62410
 		-with intermediary gene AT3G50820
@@ -495,7 +527,7 @@ Network number 40:
 		-GO ID: GO:0009408 with term: response to heat
 		-GO ID: GO:0010188 with term: response to microbial phytotoxin
 ---------------------------------------------------------------------
-Network number 41:
+Network number 43:
 	The interaction of this network is indirect between the genes:
 		-AT1G22920 and AT3G16250
 		-with intermediary gene AT2G30950
@@ -510,7 +542,7 @@ Network number 41:
 		-GO ID: GO:0009733 with term: response to auxin
 		-GO ID: GO:0010093 with term: specification of floral organ identity
 ---------------------------------------------------------------------
-Network number 42:
+Network number 44:
 	The interaction of this network is direct between the genes:
 		-AT1G09340 and AT3G63140
 	No pathways have been found in KEGG for the genes in this network.
@@ -529,7 +561,7 @@ Network number 42:
 		-GO ID: GO:0009611 with term: response to wounding
 		-GO ID: GO:0006364 with term: rRNA processing
 ---------------------------------------------------------------------
-Network number 43:
+Network number 45:
 	The interaction of this network is direct between the genes:
 		-AT3G63140 and AT1G09340
 	No pathways have been found in KEGG for the genes in this network.
@@ -541,7 +573,7 @@ Network number 43:
 		-GO ID: GO:0045727 with term: positive regulation of translation
 		-GO ID: GO:0006364 with term: rRNA processing
 ---------------------------------------------------------------------
-Network number 44:
+Network number 46:
 	The interaction of this network is indirect between the genes:
 		-AT4G26840 and AT3G47340
 		-with intermediary gene AT5G65010
@@ -552,7 +584,7 @@ Network number 44:
 		-GO ID: GO:0016925 with term: protein sumoylation
 		-GO ID: GO:0009408 with term: response to heat
 ---------------------------------------------------------------------
-Network number 45:
+Network number 47:
 	The interaction of this network is indirect between the genes:
 		-AT5G42980 and AT5G35630
 		-with intermediary gene AT3G50820
@@ -566,7 +598,7 @@ Network number 45:
 		-GO ID: GO:0009408 with term: response to heat
 		-GO ID: GO:0010188 with term: response to microbial phytotoxin
 ---------------------------------------------------------------------
-Network number 46:
+Network number 48:
 	The interaction of this network is indirect between the genes:
 		-AT3G47620 and AT1G29910
 		-with intermediary gene AT2G34420
@@ -582,7 +614,7 @@ Network number 46:
 		-GO ID: GO:0007049 with term: cell cycle
 		-GO ID: GO:0015031 with term: protein transport
 ---------------------------------------------------------------------
-Network number 47:
+Network number 49:
 	The interaction of this network is indirect between the genes:
 		-AT1G17280 and AT1G69870
 		-with intermediary gene AT5G38990
@@ -596,7 +628,7 @@ Network number 47:
 		-GO ID: GO:0030433 with term: ubiquitin-dependent ERAD pathway
 		-GO ID: GO:0006511 with term: ubiquitin-dependent protein catabolic process
 ---------------------------------------------------------------------
-Network number 48:
+Network number 50:
 	The interaction of this network is indirect between the genes:
 		-AT3G15710 and AT2G47930
 		-with intermediary gene AT3G28220
@@ -604,14 +636,14 @@ Network number 48:
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0006465", "signal peptide processing"] with term: 
 ---------------------------------------------------------------------
-Network number 49:
+Network number 51:
 	The interaction of this network is indirect between the genes:
 		-AT3G46890 and AT5G43750
 		-with intermediary gene AT3G28220
 	No pathways have been found in KEGG for the genes in this network.
 	No terms have been found in Gene Ontology for the genes in this network.
 ---------------------------------------------------------------------
-Network number 50:
+Network number 52:
 	The interaction of this network is indirect between the genes:
 		-AT5G42980 and AT3G50820
 		-with intermediary gene AT3G01500
@@ -625,7 +657,7 @@ Network number 50:
 		-GO ID: GO:0009408 with term: response to heat
 		-GO ID: GO:0010188 with term: response to microbial phytotoxin
 ---------------------------------------------------------------------
-Network number 51:
+Network number 53:
 	The interaction of this network is indirect between the genes:
 		-AT1G26830 and AT4G37610
 		-with intermediary gene AT3G48360
@@ -637,7 +669,7 @@ Network number 51:
 		-GO ID: GO:0006511 with term: ubiquitin-dependent protein catabolic process
 		-GO ID: GO:0006355 with term: regulation of transcription, DNA-templated
 ---------------------------------------------------------------------
-Network number 52:
+Network number 54:
 	The interaction of this network is indirect between the genes:
 		-AT1G21240 and AT3G61260
 		-with intermediary gene AT4G22890
@@ -646,14 +678,14 @@ Network number 52:
 		-GO ID: GO:0007166 with term: cell surface receptor signaling pathway
 		-GO ID: GO:0006468 with term: protein phosphorylation
 ---------------------------------------------------------------------
-Network number 53:
+Network number 55:
 	The interaction of this network is indirect between the genes:
 		-AT2G26180 and AT5G38990
 		-with intermediary gene AT3G61260
 	No pathways have been found in KEGG for the genes in this network.
 	No terms have been found in Gene Ontology for the genes in this network.
 ---------------------------------------------------------------------
-Network number 54:
+Network number 56:
 	The interaction of this network is indirect between the genes:
 		-AT3G47620 and AT1G29920
 		-with intermediary gene AT1G29910
@@ -669,7 +701,7 @@ Network number 54:
 		-GO ID: GO:0007049 with term: cell cycle
 		-GO ID: GO:0015031 with term: protein transport
 ---------------------------------------------------------------------
-Network number 55:
+Network number 57:
 	The interaction of this network is direct between the genes:
 		-AT4G02770 and AT4G22890
 	The following pathways have been found in KEGG for the genes in this network:
@@ -679,7 +711,7 @@ Network number 55:
 		-GO ID: GO:0015979 with term: photosynthesis
 		-GO ID: GO:0035556 with term: intracellular signal transduction
 ---------------------------------------------------------------------
-Network number 56:
+Network number 58:
 	The interaction of this network is indirect between the genes:
 		-AT4G13530 and AT4G39710
 		-with intermediary gene AT1G80440
@@ -687,7 +719,7 @@ Network number 56:
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0006355", "regulation of transcription, DNA-templated"] with term: 
 ---------------------------------------------------------------------
-Network number 57:
+Network number 59:
 	The interaction of this network is indirect between the genes:
 		-AT3G17240 and AT5G48300
 		-with intermediary gene AT2G26740
@@ -709,7 +741,7 @@ Network number 57:
 		-GO ID: GO:0055114 with term: oxidation-reduction process
 		-GO ID: GO:0046686 with term: response to cadmium ion
 ---------------------------------------------------------------------
-Network number 58:
+Network number 60:
 	The interaction of this network is indirect between the genes:
 		-AT2G02950 and AT1G14280
 		-with intermediary gene AT3G45780
@@ -722,7 +754,7 @@ Network number 58:
 		-GO ID: GO:0010218 with term: response to far red light
 		-GO ID: GO:0010114 with term: response to red light
 ---------------------------------------------------------------------
-Network number 59:
+Network number 61:
 	The interaction of this network is indirect between the genes:
 		-AT3G53900 and AT4G09010
 		-with intermediary gene AT3G16250
@@ -737,7 +769,7 @@ Network number 59:
 		-GO ID: GO:0006223 with term: uracil salvage
 		-GO ID: GO:0019252 with term: starch biosynthetic process
 ---------------------------------------------------------------------
-Network number 60:
+Network number 62:
 	The interaction of this network is indirect between the genes:
 		-AT3G26090 and AT5G01530
 		-with intermediary gene AT2G34420

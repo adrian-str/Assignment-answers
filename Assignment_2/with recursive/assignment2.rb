@@ -14,17 +14,7 @@ InteractionNetwork.search_interactors
 InteractionNetwork.load
 indirects=0
 directs=0
-InteractionNetwork.get_all.each do |net|
-  if net.type == "direct"
-    directs +=1
-  elsif net.type == "indirect"
-    indirects +=1
-  end
-  
-end
 
-puts ("Number of direct interactions is #{directs}")
-puts ("Number of indirect interactions is #{indirects}")
 
 # REPORT
 File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add-each-array-element-to-the-lines-of-a-file-in-ruby
@@ -69,7 +59,7 @@ File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add
           f.puts("\t\t-GO ID: #{g[0]} with term: #{g[1]}")
         end
       elsif net.go_terms.count == 1
-        f.puts("\t\t-GO ID: #{net.go_terms[0]} with term: #{net.go_terms[1]}")
+        f.puts("\t\t-GO ID: #{net.go_terms[0][0]} with term: #{net.go_terms[0][1]}")
       end
       
     else
@@ -78,7 +68,17 @@ File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add
   end  
   
   
+InteractionNetwork.get_all.each do |net|
+  if net.type == "direct"
+    directs +=1
+  elsif net.type == "indirect"
+    indirects +=1
+  end
   
+end
+
+puts ("Number of direct interactions is #{directs}")
+puts ("Number of indirect interactions is #{indirects}")
   
   
   
