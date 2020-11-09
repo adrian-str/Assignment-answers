@@ -4,69 +4,175 @@ Report file of an analysis to study the possible interaction between predicted c
 The number of genes analysed is 168
 To filter the possible networks a MIscore cutoff value of 0.485 has been used, as proposed in this article: ncbi.nlm.nih.gov/pmc/articles/PMC4316181/
 Interactions have been searched at two levels of depth, so they can be direct or indirect. If there are two members in the network it is direct and if there are three it's indirect.
-8 networks have been detected.
+15 networks have been detected.
 ---------------------------------------------------------------------
 Network number 1:
-	The interaction of this network is direct between the genes:
-		-at5g04140 and ["At4g37930", "At5g04140"]
-	The following pathways have been found in KEGG for the genes in this network:
-		-KEGG ID: ath00630 with pathway name: Glyoxylate and dicarboxylate metabolism
-		-KEGG ID: ath00910 with pathway name: Nitrogen metabolism
+	The interaction of this network is indirect between the genes:
+		-AT4G37140 and AT5G54270
+		-with intermediary gene AT2G34420
+	No pathways have been found in KEGG for the genes in this network.
 	The biological process terms from Gene Ontology associated with these genes are:
-		-GO ID: GO:0019676 with term: ammonia assimilation cycle
-		-GO ID: GO:0006537 with term: glutamate biosynthetic process
-		-GO ID: GO:0097054 with term: L-glutamate biosynthetic process
-		-GO ID: GO:0009853 with term: photorespiration
-		-GO ID: GO:0080114 with term: positive regulation of glycine hydroxymethyltransferase activity
-		-GO ID: GO:0009416 with term: response to light stimulus
-		-GO ID: GO:0009744 with term: response to sucrose
-		-GO ID: GO:0006541 with term: glutamine metabolic process
+		-GO ID: ["GO:0009793", "embryo development ending in seed dormancy"] with term: 
 ---------------------------------------------------------------------
 Network number 2:
 	The interaction of this network is direct between the genes:
-		-at1g37130 and ["At5g18930", "At1g37130"]
+		-AT2G13360 and AT2G13360
 	The following pathways have been found in KEGG for the genes in this network:
-		-KEGG ID: ath00910 with pathway name: Nitrogen metabolism
+		-KEGG ID: ath00250 with pathway name: Alanine, aspartate and glutamate metabolism
+		-KEGG ID: ath00260 with pathway name: Glycine, serine and threonine metabolism
+		-KEGG ID: ath00630 with pathway name: Glyoxylate and dicarboxylate metabolism
 		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+		-KEGG ID: ath01110 with pathway name: Biosynthesis of secondary metabolites
+		-KEGG ID: ath01200 with pathway name: Carbon metabolism
+		-KEGG ID: ath04146 with pathway name: Peroxisome
 	The biological process terms from Gene Ontology associated with these genes are:
-		-GO ID: GO:0042128 with term: nitrate assimilation
-		-GO ID: GO:0006809 with term: nitric oxide biosynthetic process
-		-GO ID: GO:0009635 with term: response to herbicide
-		-GO ID: GO:0009416 with term: response to light stimulus
-		-GO ID: GO:0009610 with term: response to symbiotic fungus
+		-GO ID: GO:0019265 with term: glycine biosynthetic process, by transamination of glyoxylate
+		-GO ID: GO:0009853 with term: photorespiration
 ---------------------------------------------------------------------
 Network number 3:
-	The interaction of this network is direct between the genes:
-		-at4g19170 and ["At5g17790", "At4g19170"]
 	The following pathways have been found in KEGG for the genes in this network:
-		-KEGG ID: ath00906 with pathway name: Carotenoid biosynthesis
+		-KEGG ID: ["ath04712", "Circadian rhythm - plant"] with pathway name: 
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009658 with term: chloroplast organization
+		-GO ID: GO:0010100 with term: negative regulation of photomorphogenesis
+		-GO ID: GO:0009640 with term: photomorphogenesis
+		-GO ID: GO:0010017 with term: red or far-red light signaling pathway
+		-GO ID: GO:0009585 with term: red, far-red light phototransduction
+		-GO ID: GO:2000028 with term: regulation of photoperiodism, flowering
+		-GO ID: GO:0009637 with term: response to blue light
+		-GO ID: GO:0010218 with term: response to far red light
+		-GO ID: GO:0010114 with term: response to red light
+		-GO ID: GO:0048575 with term: short-day photoperiodism, flowering
+---------------------------------------------------------------------
+Network number 4:
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath04712", "Circadian rhythm - plant"] with pathway name: 
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009658 with term: chloroplast organization
+		-GO ID: GO:0010100 with term: negative regulation of photomorphogenesis
+		-GO ID: GO:0009640 with term: photomorphogenesis
+		-GO ID: GO:0010017 with term: red or far-red light signaling pathway
+		-GO ID: GO:0009585 with term: red, far-red light phototransduction
+		-GO ID: GO:2000028 with term: regulation of photoperiodism, flowering
+		-GO ID: GO:0009637 with term: response to blue light
+		-GO ID: GO:0010218 with term: response to far red light
+		-GO ID: GO:0010114 with term: response to red light
+		-GO ID: GO:0048575 with term: short-day photoperiodism, flowering
+---------------------------------------------------------------------
+Network number 5:
+	The interaction of this network is direct between the genes:
+		-AT4G33010 and AT4G33010
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00260 with pathway name: Glycine, serine and threonine metabolism
+		-KEGG ID: ath00630 with pathway name: Glyoxylate and dicarboxylate metabolism
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+		-KEGG ID: ath01110 with pathway name: Biosynthesis of secondary metabolites
+		-KEGG ID: ath01200 with pathway name: Carbon metabolism
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0006546 with term: glycine catabolic process
+		-GO ID: GO:0019464 with term: glycine decarboxylation via glycine cleavage system
+		-GO ID: GO:0046686 with term: response to cadmium ion
+---------------------------------------------------------------------
+Network number 6:
+	The interaction of this network is direct between the genes:
+		-AT1G12780 and AT1G12780
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00052 with pathway name: Galactose metabolism
+		-KEGG ID: ath00520 with pathway name: Amino sugar and nucleotide sugar metabolism
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0045227 with term: capsule polysaccharide biosynthetic process
+		-GO ID: GO:0071555 with term: cell wall organization
+		-GO ID: GO:0006012 with term: galactose metabolic process
+		-GO ID: GO:0006364 with term: rRNA processing
+		-GO ID: GO:0033358 with term: UDP-L-arabinose biosynthetic process
+		-GO ID: GO:0006281 with term: DNA repair
+		-GO ID: GO:0009650 with term: UV protection
+---------------------------------------------------------------------
+Network number 7:
+	The interaction of this network is direct between the genes:
+		-AT3G49160 and AT3G49160
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00010 with pathway name: Glycolysis / Gluconeogenesis
+		-KEGG ID: ath00230 with pathway name: Purine metabolism
+		-KEGG ID: ath00620 with pathway name: Pyruvate metabolism
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+		-KEGG ID: ath01110 with pathway name: Biosynthesis of secondary metabolites
+		-KEGG ID: ath01200 with pathway name: Carbon metabolism
+		-KEGG ID: ath01230 with pathway name: Biosynthesis of amino acids
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0006096 with term: glycolytic process
+		-GO ID: GO:0051321 with term: meiotic cell cycle
+		-GO ID: GO:0007064 with term: mitotic sister chromatid cohesion
+---------------------------------------------------------------------
+Network number 8:
+	The interaction of this network is direct between the genes:
+		-AT4G37980 and AT4G37980
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00940 with pathway name: Phenylpropanoid biosynthesis
 		-KEGG ID: ath01100 with pathway name: Metabolic pathways
 		-KEGG ID: ath01110 with pathway name: Biosynthesis of secondary metabolites
 	The biological process terms from Gene Ontology associated with these genes are:
-		-GO ID: ["GO:0016121", "carotene catabolic process"] with term: 
+		-GO ID: GO:0010597 with term: green leaf volatile biosynthetic process
+		-GO ID: GO:0009809 with term: lignin biosynthetic process
+		-GO ID: GO:0009617 with term: response to bacterium
+		-GO ID: GO:0055114 with term: oxidation-reduction process
+		-GO ID: GO:0033512 with term: L-lysine catabolic process to acetyl-CoA via saccharopine
 ---------------------------------------------------------------------
-Network number 4:
+Network number 9:
 	The interaction of this network is direct between the genes:
-		-at5g15850 and ["At4g10240", "At5g15850"]
+		-AT5G15850 and AT2G46340
 	No pathways have been found in KEGG for the genes in this network.
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009909 with term: regulation of flower development
 		-GO ID: GO:0000398 with term: mRNA splicing, via spliceosome
 ---------------------------------------------------------------------
-Network number 5:
+Network number 10:
 	The interaction of this network is direct between the genes:
-		-at1g54040 and ["At4g23810", "At1g54040"]
-	No pathways have been found in KEGG for the genes in this network.
+		-AT1G42970 and AT1G42970
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00710 with pathway name: Carbon fixation in photosynthetic organisms
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+		-KEGG ID: ath01200 with pathway name: Carbon metabolism
 	The biological process terms from Gene Ontology associated with these genes are:
-		-GO ID: GO:0042742 with term: defense response to bacterium
-		-GO ID: GO:0019762 with term: glucosinolate catabolic process
-		-GO ID: GO:0010150 with term: leaf senescence
-		-GO ID: GO:0080028 with term: nitrile biosynthetic process
-		-GO ID: GO:0009753 with term: response to jasmonic acid
+		-GO ID: GO:0006006 with term: glucose metabolic process
+		-GO ID: GO:0019253 with term: reductive pentose-phosphate cycle
+		-GO ID: GO:0046686 with term: response to cadmium ion
+		-GO ID: GO:0009409 with term: response to cold
+		-GO ID: GO:0009416 with term: response to light stimulus
+		-GO ID: GO:0009744 with term: response to sucrose
+		-GO ID: GO:0009073 with term: aromatic amino acid family biosynthetic process
+		-GO ID: GO:0009423 with term: chorismate biosynthetic process
 ---------------------------------------------------------------------
-Network number 6:
+Network number 11:
 	The interaction of this network is direct between the genes:
-		-at3g45780 and ["At5g64330", "At3g45780"]
+		-AT2G26080 and AT2G26080
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ath00260 with pathway name: Glycine, serine and threonine metabolism
+		-KEGG ID: ath00630 with pathway name: Glyoxylate and dicarboxylate metabolism
+		-KEGG ID: ath01100 with pathway name: Metabolic pathways
+		-KEGG ID: ath01110 with pathway name: Biosynthesis of secondary metabolites
+		-KEGG ID: ath01200 with pathway name: Carbon metabolism
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0019464 with term: glycine decarboxylation via glycine cleavage system
+		-GO ID: GO:0000398 with term: mRNA splicing, via spliceosome
+		-GO ID: GO:0006546 with term: glycine catabolic process
+---------------------------------------------------------------------
+Network number 12:
+	The interaction of this network is direct between the genes:
+		-AT2G43010 and AT2G43010
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath04075", "Plant hormone signal transduction"] with pathway name: 
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009704 with term: de-etiolation
+		-GO ID: GO:0010161 with term: red light signaling pathway
+		-GO ID: GO:0010017 with term: red or far-red light signaling pathway
+		-GO ID: GO:0009585 with term: red, far-red light phototransduction
+		-GO ID: GO:0010600 with term: regulation of auxin biosynthetic process
+		-GO ID: GO:0010928 with term: regulation of auxin mediated signaling pathway
+		-GO ID: GO:0010244 with term: response to low fluence blue light stimulus by blue low-fluence system
+---------------------------------------------------------------------
+Network number 13:
 	No pathways have been found in KEGG for the genes in this network.
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009904 with term: chloroplast accumulation movement
@@ -82,23 +188,34 @@ Network number 6:
 		-GO ID: GO:0009637 with term: response to blue light
 		-GO ID: GO:0050896 with term: response to stimulus
 ---------------------------------------------------------------------
-Network number 7:
-	The interaction of this network is direct between the genes:
-		-at3g62410 and ["At3g26650", "At3g62410"]
+Network number 14:
 	No pathways have been found in KEGG for the genes in this network.
 	The biological process terms from Gene Ontology associated with these genes are:
-		-GO ID: GO:0071454 with term: cellular response to anoxia
-		-GO ID: GO:0070417 with term: cellular response to cold
-		-GO ID: GO:0034605 with term: cellular response to heat
-		-GO ID: GO:0080153 with term: negative regulation of reductive pentose-phosphate cycle
-		-GO ID: GO:0018316 with term: peptide cross-linking via L-cystine
-		-GO ID: GO:0065003 with term: protein-containing complex assembly
-		-GO ID: GO:0019253 with term: reductive pentose-phosphate cycle
-		-GO ID: GO:0009416 with term: response to light stimulus
-		-GO ID: GO:0009744 with term: response to sucrose
+		-GO ID: GO:0009904 with term: chloroplast accumulation movement
+		-GO ID: GO:0009903 with term: chloroplast avoidance movement
+		-GO ID: GO:0007623 with term: circadian rhythm
+		-GO ID: GO:0010362 with term: negative regulation of anion channel activity by blue light
+		-GO ID: GO:0009638 with term: phototropism
+		-GO ID: GO:0046777 with term: protein autophosphorylation
+		-GO ID: GO:0006468 with term: protein phosphorylation
+		-GO ID: GO:0018298 with term: protein-chromophore linkage
+		-GO ID: GO:0010155 with term: regulation of proton transport
+		-GO ID: GO:0010119 with term: regulation of stomatal movement
+		-GO ID: GO:0009637 with term: response to blue light
+		-GO ID: GO:0050896 with term: response to stimulus
 ---------------------------------------------------------------------
-Network number 8:
-	The interaction of this network is direct between the genes:
-		-at4g39710 and ["At4g03280", "At4g39710"]
+Network number 15:
 	No pathways have been found in KEGG for the genes in this network.
-	No terms have been found in Gene Ontology for the genes in this network.
+	The biological process terms from Gene Ontology associated with these genes are:
+		-GO ID: GO:0009904 with term: chloroplast accumulation movement
+		-GO ID: GO:0009903 with term: chloroplast avoidance movement
+		-GO ID: GO:0007623 with term: circadian rhythm
+		-GO ID: GO:0010362 with term: negative regulation of anion channel activity by blue light
+		-GO ID: GO:0009638 with term: phototropism
+		-GO ID: GO:0046777 with term: protein autophosphorylation
+		-GO ID: GO:0006468 with term: protein phosphorylation
+		-GO ID: GO:0018298 with term: protein-chromophore linkage
+		-GO ID: GO:0010155 with term: regulation of proton transport
+		-GO ID: GO:0010119 with term: regulation of stomatal movement
+		-GO ID: GO:0009637 with term: response to blue light
+		-GO ID: GO:0050896 with term: response to stimulus

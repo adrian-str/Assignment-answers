@@ -66,7 +66,7 @@ class InteractionNetwork
   
   def self.get_interactors(code,cutv=0.485)
       genes=@@genes
-      res = InteractionNetwork.fetch("http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/interactor/#{code}%20AND%20species:arath/?format=tab25")
+      res = InteractionNetwork.fetch("http://bar.utoronto.ca:9090/psicquic/webservices/current/search/interactor/#{code}/?format=tab25")
       miscore=/i\w+-\w+:(0\.\d+)/
       if res
         intact=res.body.split("\n")
@@ -80,7 +80,7 @@ class InteractionNetwork
             g2=g2[0]
             
           
-          if g1.downcase==code.downcase #get the interactor not the same gene
+          if g1.downcase==code.downcase and g2.downcase != code.downcase #get the interactor not the same gene
             
             g1=g2
             
@@ -95,14 +95,14 @@ class InteractionNetwork
             
           else
             g0=g1
-            res = InteractionNetwork.fetch("http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/interactor/#{g0}%20AND%20species:arath/?format=tab25")
+            res = InteractionNetwork.fetch("http://bar.utoronto.ca:9090/psicquic/webservices/current/search/interactor/#{g0}/?format=tab25")
             if res
               intact2=res.body.split("\n")
               intact2.each do |int2|
           
-                next if int2.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)\(locus\sname\)/).nil?
+                next if int2.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)/).nil?
                
-                g1,g2=int2.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)\(locus\sname\)/)
+                g1,g2=int2.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)/)
                 next if g1.nil?||g2.nil?
                 g1=g1[0]
                 g2=g2[0]

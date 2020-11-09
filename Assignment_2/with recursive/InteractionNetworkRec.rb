@@ -74,32 +74,32 @@ class InteractionNetwork
   def self.get_interactors(code,cutv=0.485)
     genes=@@genes
     agi=@agi
-    miscore=/i\w+-\w+:(0\.\d+)/
+    miscore=/i\w+-\w+:(0\.\d+?)/
     
     while @@counter < 3  
         @@counter += 1
-        res = fetch("http://www.ebi.ac.uk/Tools/webservices/psicquic/intact/webservices/current/search/interactor/#{code}%20AND%20species:arath/?format=tab25")
-        miscore=/i\w+-\w+:(0\.\d+)/
+        res = InteractionNetwork.fetch("http://bar.utoronto.ca:9090/psicquic/webservices/current/search/interactor/#{code}/?format=tab25")
+        
         if res
           intact=res.body.split("\n")
           intact.each do |int|
             
-            next if int.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)\(locus\sname\)/).nil?
+            next if int.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)/).nil?
              
-              g1,g2=int.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)\(locus\sname\)/)
+              g1,g2=int.scan(/(A[Tt]\d[Gg]\d\d\d\d\d)/)
             next if g1.nil?||g2.nil? 
               g1=g1[0]
               g2=g2[0]
               
-            if g1.downcase==code.downcase #get the interactor not the same gene
-               g1=g2
+            if g1.downcase == code.downcase && g2.downcase != code.downcase #get the interactor not the same gene
+               g1 = g2
             end
             score=int.match(miscore)[1].to_f
             next if score<cutv
             if genes.include?(g1.downcase) 
               if @@counter == 1       
                 @@interacting[code]=g1
-              elsif @@counter == 2 && agi != g1.downcase #if the gene is on the list and is different from the one used to search
+              elsif @@counter == 2 and agi != g1.downcase #if the gene is on the list and is different from the one used to search
                 #when its looking for indirect interactions save the intermediate locus
                 @@interacting[agi]=[code,g1] 
               end
@@ -161,7 +161,7 @@ class InteractionNetwork
           ids << v  
         end
         ids << key
-      elsif value.is_a?(String)
+      else
       ids=[key,value]
       end
       InteractionNetwork.new(:network => count, :members =>ids)

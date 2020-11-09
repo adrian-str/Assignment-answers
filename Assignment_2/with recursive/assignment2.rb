@@ -32,11 +32,11 @@ File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add
     f.puts("Network number #{net.network}:")
     if net.members.count == 2
       f.puts("\tThe interaction of this network is direct between the genes:")
-      f.puts("\t\t-#{net.members[0]} and #{net.members[1]}")
+      f.puts("\t\t-#{net.members[0].upcase} and #{net.members[1].upcase}")
     elsif net.members.count == 3
       f.puts("\tThe interaction of this network is indirect between the genes:")
       f.puts("\t\t-#{net.members[0].upcase} and #{net.members[2].upcase}")
-      f.puts("\t\t-with intermediary gene #{net.members[1]}")
+      f.puts("\t\t-with intermediary gene #{net.members[1].upcase}")
     end
     if net.kegg_path[0] #if there is something in this property
       f.puts("\tThe following pathways have been found in KEGG for the genes in this network:")
