@@ -20,9 +20,9 @@ end
 
 # REPORT
 File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add-each-array-element-to-the-lines-of-a-file-in-ruby
-  f.puts("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
-  f.puts("Report file of an analysis to study the possible interaction between predicted co-expressed genes.")
-  f.puts("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+  f.puts("|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|")
+  f.puts("|Report file of an analysis to study the possible interaction between predicted co-expressed genes.|")
+  f.puts("|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|")
   f.puts("The number of genes analysed is #{File.open(agilist, "r").each_line.count}")
   f.puts("To filter the possible networks a MIscore cutoff value of 0.485 has been used, as proposed in this article: ncbi.nlm.nih.gov/pmc/articles/PMC4316181/")
   f.puts("Interactions have been searched at two levels of depth, so they can be direct or indirect. If there are two members in the network it is direct and if there are three it's indirect.")
@@ -37,6 +37,8 @@ File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add
       f.puts("\tThe interaction of this network is indirect between the genes:")
       f.puts("\t\t-#{net.members[0].upcase} and #{net.members[2].upcase}")
       f.puts("\t\t-with intermediary gene #{net.members[1].upcase}")
+    else
+      f.puts("what?? #{net.members}")
     end
     if net.kegg_path[0] #if there is something in this property
       f.puts("\tThe following pathways have been found in KEGG for the genes in this network:")

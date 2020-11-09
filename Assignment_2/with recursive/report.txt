@@ -1,6 +1,6 @@
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-Report file of an analysis to study the possible interaction between predicted co-expressed genes.
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
+|Report file of an analysis to study the possible interaction between predicted co-expressed genes.|
+|~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~|
 The number of genes analysed is 168
 To filter the possible networks a MIscore cutoff value of 0.485 has been used, as proposed in this article: ncbi.nlm.nih.gov/pmc/articles/PMC4316181/
 Interactions have been searched at two levels of depth, so they can be direct or indirect. If there are two members in the network it is direct and if there are three it's indirect.
@@ -30,6 +30,7 @@ Network number 2:
 		-GO ID: GO:0009853 with term: photorespiration
 ---------------------------------------------------------------------
 Network number 3:
+what?? ["at2g46340", "At5g15850", "At1g60950", "At1g20020", "at4g22890"]
 	The following pathways have been found in KEGG for the genes in this network:
 		-KEGG ID: ["ath04712", "Circadian rhythm - plant"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
@@ -45,6 +46,7 @@ Network number 3:
 		-GO ID: GO:0048575 with term: short-day photoperiodism, flowering
 ---------------------------------------------------------------------
 Network number 4:
+what?? ["at2g46340", "At5g15850", "At1g60950", "At1g20020", "at4g22890"]
 	The following pathways have been found in KEGG for the genes in this network:
 		-KEGG ID: ["ath04712", "Circadian rhythm - plant"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
@@ -173,6 +175,7 @@ Network number 12:
 		-GO ID: GO:0010244 with term: response to low fluence blue light stimulus by blue low-fluence system
 ---------------------------------------------------------------------
 Network number 13:
+what?? ["at3g45780", "At3g45780", "at1g09340", "At3g63140", "at1g09340", "at3g63140", "At1g09340", "at3g63140"]
 	No pathways have been found in KEGG for the genes in this network.
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009904 with term: chloroplast accumulation movement
@@ -189,6 +192,7 @@ Network number 13:
 		-GO ID: GO:0050896 with term: response to stimulus
 ---------------------------------------------------------------------
 Network number 14:
+what?? ["at3g45780", "At3g45780", "at1g09340", "At3g63140", "at1g09340", "at3g63140", "At1g09340", "at3g63140"]
 	No pathways have been found in KEGG for the genes in this network.
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009904 with term: chloroplast accumulation movement
@@ -205,6 +209,7 @@ Network number 14:
 		-GO ID: GO:0050896 with term: response to stimulus
 ---------------------------------------------------------------------
 Network number 15:
+what?? ["at3g45780", "At3g45780", "at1g09340", "At3g63140", "at1g09340", "at3g63140", "At1g09340", "at3g63140"]
 	No pathways have been found in KEGG for the genes in this network.
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009904 with term: chloroplast accumulation movement

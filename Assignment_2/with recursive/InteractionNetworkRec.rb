@@ -156,12 +156,12 @@ class InteractionNetwork
     ids=[]
     @@interacting.each do |key,value|
       count+=1
-      if value.is_a?(Array)
+      if value.is_a?(Array) && value.count == 2
         value.each do |v|
           ids << v  
         end
         ids << key
-      else
+      elsif value.is_a?(String) && key.is_a?(String)
       ids=[key,value]
       end
       InteractionNetwork.new(:network => count, :members =>ids)
