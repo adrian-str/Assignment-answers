@@ -69,17 +69,31 @@ File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add
   
 end
 
+members=[]
 InteractionNetwork.get_all.each do |net|
   if net.members.count == 2
     directs +=1
   elsif net.members.count == 3
     indirects +=1
   end
+  net.members.each do |member|
+    members << member.upcase
+  end
   
 end
+int_genes=members.uniq.count #since my code isn't perfect, there might be some duplicates in members, so I want to take those out
+#before declaring an opinion about the results of the paper
+total_genes=File.open(agilist, "r").each_line.count
+percent=int_genes*100/total_genes #percentage of genes that interact between them
 
+puts ("The percentage of genes from the given list that interact between each other is #{percent}%")
 puts ("Number of direct interactions is #{directs}")
 puts ("Number of indirect interactions is #{indirects}")
-  
+if percent > 50 and directs >= indirects/3 #the probability of indirect interactions is much higher
+  puts ("Based on the results of this analysis, the conclusions of the paper cannot be refuted.")
+else
+  puts ("Based on the results of this analysis, the conclusions of the paper should be revised.")
+end
+
   
   

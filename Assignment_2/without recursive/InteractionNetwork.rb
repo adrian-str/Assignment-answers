@@ -1,24 +1,70 @@
-require 'rest-client'
-require 'json'
+# == InteractionNetwork
+#
+# This is a complex representation of an interaction network
+# between a list of AGI locus codes, with KEGG pathways and
+# GO biological processes annotations.
+#
+# == Summary
+#
+# This can be used to check the interactions within a list of
+# genes, mainly between Arabidopsis since it uses BAR UToronto
+# database.
+
 class InteractionNetwork
   
   @@num = 0 #to count the number of networks
+  
+  # Get/Set the number of the network
+  # @!attribute [rw]
+  # @return [Integer] the network number
   attr_accessor :network #assign a number to each network
+  
+  # Get/Set the members of the network
+  # @!attribute [rw]
+  # @return list [Array<String>] the members of the network
   attr_accessor :members #list with the members of the network
+  
+  # Get/Set the KEGG pathways annotations of the network
+  # @!attribute [rw]
+  # @return list [Array<String>] List of KEGG pathways annotations of all the members in the network
   attr_accessor :kegg_path #KEGG annotations of the members
+  
+  # Get/Set the GO biological process annotations of the network
+  # @!attribute [rw]
+  # @return list [Array<String>] List of GO Biological Process annotations of all the members
   attr_accessor :go_terms #GO biological proccesses annotations of the members
-  @@all_interactions=[] #list with all the objects of the class
-  @@genes=[] #list with all the genes read from the file
+  
+  # Array with all the objects of the class
+  # @return list [Array<InteractionNetwork>] Array with all the instances of the class
+  @@all_interactions=[]
+  
+  # Array with all the genes read from the input file
+  # @return list [Array<String>] Array with gene codes 
+  @@genes=[] 
+  
+  # Create a new instance of InteractionNetwork
+  
+  # @param network [Integer] the number of the network as an Integer
+  # @param members list [Array<String>] the members of the network as a List of Strings
+  # @param kegg_path list [Array<String>] the KEGG pathways annotations of the members as a List of Strings
+  # @param go_terms list [Array<String>] the GO Biological Process annotations of the members as a List of Strings
+  # @return [InteractionNetwork] an instance of InteractionNetwork
   
   def initialize(params={})
     @network = params.fetch(:network,0)
-    @type = params.fetch(:type,'undefined')
     @members = params.fetch(:members,'NA')
     @kegg_path = annotate_kegg(ids=@members) #get KEGG pathways annotation of all the members in a network
     @go_terms = annotate_GO(ids=@members) #get GO biological processes annotation of all the members in a network
     @@num += 1 #every time a network object is initialized count it
     @@all_interactions << self #add all the objects to this list
   end
+  
+  # Handles a RestClient request
+  # @param url [String] the URL adress
+  # @param headers [Hash] for content-type negotiation
+  # @param user [String] username for private URLs
+  # @param pass [String] password for private URLs
+  # @return [String,Error] the resulting page or exception
   
   def self.fetch(url, headers = {accept: "*/*"}, user = "", pass="")
     #class method to retrieve web data avoiding possible crashes
@@ -43,6 +89,10 @@ class InteractionNetwork
       response = false
       return response  # now we are returning 'False', and we will check that with an \"if\" statement in our main code
   end
+  
+  # Read the gene codes from a file and add them to an Array
+  # @param file [String] path to the input file
+  # @return [Array<String>] an Array containing the gene codes from the file
    
   def self.get_agi(file) #class method to retrieve gene codes from a file and add them to class variable
     File.open(file).each do |code|
@@ -51,16 +101,22 @@ class InteractionNetwork
     
   end
   
+  # Get the number of InteractionNetwork objects
+  # @return [Integer] the number of objects in the class
   def self.num #class method to get the number of networks
     return @@num
   end
   
-  def self.search_interactors(cutv=0.485) #class method to search the interactions of the genes from the previous file
+  # Search for the protein-protein interactions between the genes in the Array in the BAR UToronto database
+  # using the Psicquic webservice. It searches for direct and indirect interactions
+  # @param cutv [Float] cutoff value for MIscore of the interactions.
+  # @param genes [Array<String>] an Array of the genes used to search
+  # @return [Hash] a Hash with gene used to search as key and interactors present in the genes Array
+  def self.search_interactors(cutv=0.485, genes=@@genes) #class method to search the interactions of the genes from the previous file
     #and save them in a class variable if MIscore is bigger than the cutoff value (cutv)
     @@interacting=Hash.new
-    @@genes.each do |code|
+    genes.each do |code|
       res = InteractionNetwork.fetch("http://bar.utoronto.ca:9090/psicquic/webservices/current/search/interactor/#{code}/?format=tab25")
-      #get the interactors of each AGI locus from BAR UToronto using psicquic webservice
       miscore=/i\w+-\w+:(0\.\d+)/ #regular expression to match the score of the interaction
       if res
         intact=res.body.split("\n") #tab25 is a format in which each interaction is separated by newline, get list of interactions
@@ -98,10 +154,8 @@ class InteractionNetwork
             
                 next if score<cutv
                 if @@genes.include?(g1.downcase)
-                  if !@@interacting.keys.include?(code) #(does not include) if no other interactions have been found for this locus before
-                    # to avoid over-writing interactions
-                      @@interacting[code]=[g0,g1] #save the first locus used to search, the intermediary gene (g0) and another locus
-                      #found on the list
+                  if !@@interacting.keys.include?(code) #(does not include) if no other interactions have been found for this locus before to avoid over-writing interactions
+                      @@interacting[code]=[g0,g1] #save the first locus used to search, the intermediary gene (g0) and another locus found on the list
                   end
                 end
               end
@@ -112,11 +166,15 @@ class InteractionNetwork
     end
   end
   
+  # Get the KEGG pathways annotations for an Array of gene codes using TOGO REST API
+  # @param ids [Array<String>] Array with the gene codes to annotate
+  # @param db [String] name of the database
+  # @param field [String] name of the field of the given database
+  # @return [Array<String>] Array with annotations
   def annotate_kegg(ids,db="genes",field="pathways") #method to annotate every member of a network with KEGG
     annotations=[] #list for annotations
-    ids.each do |id| #the members are saved in a list
+    ids.each do |id| 
       resp = InteractionNetwork.fetch("http://togows.org/entry/#{db}/ath:#{id}/#{field}.json")
-      #using TOGO "REST" API with genes database and pathways field
       if resp
         res=JSON.parse(resp.body)[0] #access the results (json format is a list)
         res.each do |kegg_id,kegg_p| #data is in hash format, get
@@ -128,6 +186,11 @@ class InteractionNetwork
     end  
   end    
   
+  # Get the GO Biological Process annotations for an Array of gene codes using TOGO REST API
+  # @param ids [Array<String>] Array with the gene codes to annotate
+  # @param db [String] name of the database
+  # @param field [String] name of the field of the given database
+  # @return [Array<String>] Array with annotations
   def annotate_GO(ids,db="uniprot",field="dr") #annotate with GO from uniprot cross refferences
     annotations=[]
     ids.each do |id|
@@ -135,8 +198,7 @@ class InteractionNetwork
       
       if resp
         res=JSON.parse(resp.body)[0]
-        res["GO"].each do |term| #dr format is hashes --> list of lists
-          #GO lists have three elements: GO-id,GOterm(class:definition)
+        res["GO"].each do |term| #dr format is hashes --> list of lists GO lists have three elements: GO-id,GOterm(class:definition)
           if term[1]=~/P:/ #P=biological processes class
             goid=term[0]
             goterm=term[1].match(/:(.+)/)[1]
@@ -148,8 +210,10 @@ class InteractionNetwork
     end      
   end
   
-  def self.load #create the objects of this class
-    count=0 #for the number of network
+  # Creates the InteractionNetwork objects running the initialize (see #initialize) method
+  # @return [InteractionNetwork] an instance of InteractionNetwork
+  def self.load 
+    count=0 #for the network number
     @@interacting.each do |key,value| #interacting class variable is a hash
       ids=[]
       count+=1
@@ -165,7 +229,8 @@ class InteractionNetwork
       end
     end
   end
-  
+  # Get all the objects of the class saved in the class variable (see #initialize)
+  # @return [Array<InteractionNetwork>] an Array with all the InteractionNetwork instances
   def self.get_all # get the list with all the objects
     return @@all_interactions
   end
