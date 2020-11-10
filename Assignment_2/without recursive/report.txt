@@ -69,7 +69,8 @@ Network number 6:
 	The interaction of this network is indirect between the genes:
 		-AT3G48150 and AT1G03130
 		-with intermediary gene AT3G16250
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath04120", "Ubiquitin mediated proteolysis"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0031145 with term: anaphase-promoting complex-dependent catabolic process
 		-GO ID: GO:0051301 with term: cell division
@@ -111,7 +112,8 @@ Network number 8:
 Network number 9:
 	The interaction of this network is direct between the genes:
 		-AT2G46340 and AT5G15850
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath04712", "Circadian rhythm - plant"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009658 with term: chloroplast organization
 		-GO ID: GO:0010100 with term: negative regulation of photomorphogenesis
@@ -142,7 +144,8 @@ Network number 11:
 	The interaction of this network is indirect between the genes:
 		-AT4G20360 and AT2G21330
 		-with intermediary gene AT2G26740
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath04626", "Plant-pathogen interaction"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009658 with term: chloroplast organization
 		-GO ID: GO:0048366 with term: leaf development
@@ -173,7 +176,8 @@ Network number 14:
 	The interaction of this network is indirect between the genes:
 		-AT4G26840 and AT5G65010
 		-with intermediary gene AT3G47340
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath03013", "RNA transport"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0010286 with term: heat acclimation
 		-GO ID: GO:0043433 with term: negative regulation of DNA-binding transcription factor activity
@@ -198,7 +202,8 @@ Network number 16:
 	The interaction of this network is indirect between the genes:
 		-AT3G62870 and AT4G33010
 		-with intermediary gene AT3G54050
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath03010", "Ribosome"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0000470 with term: maturation of LSU-rRNA
 		-GO ID: GO:0042254 with term: ribosome biogenesis
@@ -227,7 +232,8 @@ Network number 19:
 	The interaction of this network is indirect between the genes:
 		-AT2G33210 and AT4G21210
 		-with intermediary gene AT2G45170
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath03018", "RNA degradation"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0006457 with term: protein folding
 		-GO ID: GO:0042026 with term: protein refolding
@@ -355,7 +361,8 @@ Network number 29:
 	The interaction of this network is indirect between the genes:
 		-AT1G10210 and AT5G17300
 		-with intermediary gene AT3G45780
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath04016", "MAPK signaling pathway - plant"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009734 with term: auxin-activated signaling pathway
 		-GO ID: GO:0035556 with term: intracellular signal transduction
@@ -365,7 +372,8 @@ Network number 30:
 	The interaction of this network is indirect between the genes:
 		-AT5G12980 and AT3G27690
 		-with intermediary gene AT5G54270
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath03018", "RNA degradation"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0017148", "negative regulation of translation"] with term: 
 ---------------------------------------------------------------------
@@ -373,7 +381,8 @@ Network number 31:
 	The interaction of this network is indirect between the genes:
 		-AT5G38890 and AT2G26080
 		-with intermediary gene AT3G45780
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath03018", "RNA degradation"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0006396", "RNA processing"] with term: 
 ---------------------------------------------------------------------
@@ -381,7 +390,8 @@ Network number 32:
 	The interaction of this network is indirect between the genes:
 		-AT1G26830 and AT3G48360
 		-with intermediary gene AT4G37610
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath04120", "Ubiquitin mediated proteolysis"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009911 with term: positive regulation of flower development
 		-GO ID: GO:0016567 with term: protein ubiquitination
@@ -393,7 +403,8 @@ Network number 33:
 	The interaction of this network is indirect between the genes:
 		-AT5G19320 and AT1G61520
 		-with intermediary gene AT1G12900
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath03013", "RNA transport"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0006913", "nucleocytoplasmic transport"] with term: 
 ---------------------------------------------------------------------
@@ -401,7 +412,8 @@ Network number 34:
 	The interaction of this network is indirect between the genes:
 		-AT2G01570 and AT2G43010
 		-with intermediary gene AT3G16250
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath04075", "Plant hormone signal transduction"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009740 with term: gibberellic acid mediated signaling pathway
 		-GO ID: GO:0042538 with term: hyperosmotic salinity response
@@ -430,7 +442,8 @@ Network number 35:
 	The interaction of this network is indirect between the genes:
 		-AT3G15710 and AT3G28220
 		-with intermediary gene AT2G47930
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath03060", "Protein export"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0006465", "signal peptide processing"] with term: 
 ---------------------------------------------------------------------
@@ -454,7 +467,8 @@ Network number 37:
 	The interaction of this network is indirect between the genes:
 		-AT3G62870 and AT3G54050
 		-with intermediary gene AT1G68570
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath03010", "Ribosome"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0000470 with term: maturation of LSU-rRNA
 		-GO ID: GO:0042254 with term: ribosome biogenesis
@@ -493,7 +507,8 @@ Network number 40:
 	The interaction of this network is indirect between the genes:
 		-AT3G62870 and AT1G68570
 		-with intermediary gene AT3G54050
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath03010", "Ribosome"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0000470 with term: maturation of LSU-rRNA
 		-GO ID: GO:0042254 with term: ribosome biogenesis
@@ -577,7 +592,8 @@ Network number 46:
 	The interaction of this network is indirect between the genes:
 		-AT4G26840 and AT3G47340
 		-with intermediary gene AT5G65010
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath03013", "RNA transport"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0010286 with term: heat acclimation
 		-GO ID: GO:0043433 with term: negative regulation of DNA-binding transcription factor activity
@@ -632,7 +648,8 @@ Network number 50:
 	The interaction of this network is indirect between the genes:
 		-AT3G15710 and AT2G47930
 		-with intermediary gene AT3G28220
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath03060", "Protein export"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: ["GO:0006465", "signal peptide processing"] with term: 
 ---------------------------------------------------------------------
@@ -661,7 +678,8 @@ Network number 53:
 	The interaction of this network is indirect between the genes:
 		-AT1G26830 and AT4G37610
 		-with intermediary gene AT3G48360
-	No pathways have been found in KEGG for the genes in this network.
+	The following pathways have been found in KEGG for the genes in this network:
+		-KEGG ID: ["ath04120", "Ubiquitin mediated proteolysis"] with pathway name: 
 	The biological process terms from Gene Ontology associated with these genes are:
 		-GO ID: GO:0009911 with term: positive regulation of flower development
 		-GO ID: GO:0016567 with term: protein ubiquitination
