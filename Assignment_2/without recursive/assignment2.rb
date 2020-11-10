@@ -40,12 +40,12 @@ File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add
     end
     if !net.kegg_path[0].nil? #if there is something in this property
       f.puts("\tThe following pathways have been found in KEGG for the genes in this network:")
-      if net.kegg_path.count > 2 && net.kegg_path[0][0].is_a?(Array)
+      if net.kegg_path.count > 2 && net.kegg_path[0].is_a?(Array)
         net.kegg_path.each do |k|
           f.puts("\t\t-KEGG ID: #{k[0]} with pathway name: #{k[1]}")
         end
       else #net.kegg_path.count > 0
-        f.puts("\t\t-KEGG ID: #{net.kegg_path[0]} with pathway name: #{net.kegg_path[1]}")
+        f.puts("\t\t-KEGG ID: #{net.kegg_path[0][0]} with pathway name: #{net.kegg_path[0][1]}")
       end
       
     else
@@ -54,12 +54,12 @@ File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add
     
     if !net.go_terms[0].nil? #if there is something in this property
       f.puts("\tThe biological process terms from Gene Ontology associated with these genes are:")
-      if net.go_terms.count > 2 && net.go_terms[0][0].is_a?(Array)
+      if net.go_terms.count > 2 && net.go_terms[0].is_a?(Array)
         net.go_terms.each do |g|
           f.puts("\t\t-GO ID: #{g[0]} with term: #{g[1]}")
         end
       else #net.go_terms.count > 0 
-        f.puts("\t\t-GO ID: #{net.go_terms[0]} with term: #{net.go_terms[1]}")
+        f.puts("\t\t-GO ID: #{net.go_terms[0][0]} with term: #{net.go_terms[0][1]}")
       end
       
     else
@@ -68,7 +68,7 @@ File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add
   end  
   
 end
-File.close(report)
+
 InteractionNetwork.get_all.each do |net|
   if net.members.count == 2
     directs +=1
