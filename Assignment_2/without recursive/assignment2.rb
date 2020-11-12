@@ -9,6 +9,7 @@ unless agilist && report
   abort "run this using the command\n ruby assignment2.rb AGIlist.txt report.txt"
 end
 
+puts("This will take a while...")
 InteractionNetwork.get_agi(agilist)
 InteractionNetwork.search_interactors
 InteractionNetwork.load
