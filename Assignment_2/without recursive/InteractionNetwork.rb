@@ -12,6 +12,8 @@
 
 class InteractionNetwork
   
+  # Class variable to count the number of networks
+  # @return [Integer] number of objects in the class
   @@num = 0 #to count the number of networks
   
   # Get/Set the number of the network
