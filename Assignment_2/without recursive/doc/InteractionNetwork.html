@@ -173,6 +173,24 @@ between Arabidopsis since it uses BAR UToronto database.</p>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;<span class='object_link'><a href="" title="InteractionNetwork (class)">InteractionNetwork</a></span>&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array with all the instances of the class</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
         </dt>
@@ -189,6 +207,24 @@ between Arabidopsis since it uses BAR UToronto database.</p>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>Array with gene codes</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div>
         </dt>
@@ -206,7 +242,7 @@ between Arabidopsis since it uses BAR UToronto database.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#go_terms-instance_method" title="#go_terms (instance method)">#<strong>go_terms</strong>  &#x21d2; Object </a>
+      <a href="#go_terms-instance_method" title="#go_terms (instance method)">#<strong>go_terms</strong>  &#x21d2; Array&lt;String&gt; </a>
     
 
     
@@ -233,7 +269,7 @@ between Arabidopsis since it uses BAR UToronto database.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#kegg_path-instance_method" title="#kegg_path (instance method)">#<strong>kegg_path</strong>  &#x21d2; Object </a>
+      <a href="#kegg_path-instance_method" title="#kegg_path (instance method)">#<strong>kegg_path</strong>  &#x21d2; Array&lt;String&gt; </a>
     
 
     
@@ -260,7 +296,7 @@ between Arabidopsis since it uses BAR UToronto database.</p>
       <li class="public ">
   <span class="summary_signature">
     
-      <a href="#members-instance_method" title="#members (instance method)">#<strong>members</strong>  &#x21d2; Object </a>
+      <a href="#members-instance_method" title="#members (instance method)">#<strong>members</strong>  &#x21d2; Array&lt;String&gt; </a>
     
 
     
@@ -604,13 +640,13 @@ REST API.</p>
         <span class='name'>members</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>list [Array&lt;String&gt;] the members of the network as a List of Strings</p>
+<p>the members of the network as a List of Strings</p>
 </div>
       
     </li>
@@ -620,14 +656,13 @@ REST API.</p>
         <span class='name'>kegg_path</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>list [Array&lt;String&gt;] the KEGG pathways annotations of the members as
-a List of Strings</p>
+<p>the KEGG pathways annotations of the members as a List of Strings</p>
 </div>
       
     </li>
@@ -637,14 +672,13 @@ a List of Strings</p>
         <span class='name'>go_terms</span>
       
       
-        <span class='type'></span>
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
       
       
       
         &mdash;
         <div class='inline'>
-<p>list [Array&lt;String&gt;] the GO Biological Process annotations of the
-members as a List of Strings</p>
+<p>the GO Biological Process annotations of the members as a List of Strings</p>
 </div>
       
     </li>
@@ -693,7 +727,7 @@ members as a List of Strings</p>
       <div class="method_details first">
   <h3 class="signature first" id="go_terms-instance_method">
   
-    #<strong>go_terms</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>go_terms</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt> 
   
 
   
@@ -709,6 +743,24 @@ members as a List of Strings</p>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>List of GO Biological Process annotations of all the members</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -736,7 +788,7 @@ members as a List of Strings</p>
       <div class="method_details ">
   <h3 class="signature " id="kegg_path-instance_method">
   
-    #<strong>kegg_path</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>kegg_path</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt> 
   
 
   
@@ -752,6 +804,24 @@ members as a List of Strings</p>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>List of KEGG pathways annotations of all the members in the network</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -779,7 +849,7 @@ members as a List of Strings</p>
       <div class="method_details ">
   <h3 class="signature " id="members-instance_method">
   
-    #<strong>members</strong>  &#x21d2; <tt>Object</tt> 
+    #<strong>members</strong>  &#x21d2; <tt>Array&lt;String&gt;</tt> 
   
 
   
@@ -795,6 +865,24 @@ members as a List of Strings</p>
 </div>
 <div class="tags">
   
+<p class="tag_title">Returns:</p>
+<ul class="return">
+  
+    <li>
+      
+      
+        <span class='type'>(<tt>Array&lt;String&gt;</tt>)</span>
+      
+      
+      
+        &mdash;
+        <div class='inline'>
+<p>the members of the network</p>
+</div>
+      
+    </li>
+  
+</ul>
 
 </div><table class="source_code">
   <tr>
@@ -1847,7 +1935,7 @@ REST API</p>
 </div>
 
       <div id="footer">
-  Generated on Thu Nov 12 14:59:39 2020 by
+  Generated on Thu Nov 12 15:07:46 2020 by
   <a href="http://yardoc.org" title="Yay! A Ruby Documentation Tool" target="_parent">yard</a>
   0.9.25 (ruby-2.5.1).
 </div>

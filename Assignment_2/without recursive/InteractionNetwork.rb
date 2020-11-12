@@ -23,33 +23,33 @@ class InteractionNetwork
   
   # Get/Set the members of the network
   # @!attribute [rw]
-  # @return list [Array<String>] the members of the network
+  # @return [Array<String>] the members of the network
   attr_accessor :members #list with the members of the network
   
   # Get/Set the KEGG pathways annotations of the network
   # @!attribute [rw]
-  # @return list [Array<String>] List of KEGG pathways annotations of all the members in the network
+  # @return [Array<String>] List of KEGG pathways annotations of all the members in the network
   attr_accessor :kegg_path #KEGG annotations of the members
   
   # Get/Set the GO biological process annotations of the network
   # @!attribute [rw]
-  # @return list [Array<String>] List of GO Biological Process annotations of all the members
+  # @return [Array<String>] List of GO Biological Process annotations of all the members
   attr_accessor :go_terms #GO biological proccesses annotations of the members
   
   # Array with all the objects of the class
-  # @return list [Array<InteractionNetwork>] Array with all the instances of the class
+  # @return [Array<InteractionNetwork>] Array with all the instances of the class
   @@all_interactions=[]
   
   # Array with all the genes read from the input file
-  # @return list [Array<String>] Array with gene codes 
+  # @return [Array<String>] Array with gene codes 
   @@genes=[] 
   
   # Create a new instance of InteractionNetwork
   
   # @param network [Integer] the number of the network as an Integer
-  # @param members list [Array<String>] the members of the network as a List of Strings
-  # @param kegg_path list [Array<String>] the KEGG pathways annotations of the members as a List of Strings
-  # @param go_terms list [Array<String>] the GO Biological Process annotations of the members as a List of Strings
+  # @param members [Array<String>] the members of the network as a List of Strings
+  # @param kegg_path [Array<String>] the KEGG pathways annotations of the members as a List of Strings
+  # @param go_terms [Array<String>] the GO Biological Process annotations of the members as a List of Strings
   # @return [InteractionNetwork] an instance of InteractionNetwork
   
   def initialize(params={})
