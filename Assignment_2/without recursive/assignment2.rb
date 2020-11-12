@@ -13,9 +13,6 @@ puts("This will take a while...")
 InteractionNetwork.get_agi(agilist)
 InteractionNetwork.search_interactors
 InteractionNetwork.load
-indirects=0
-directs=0
-
 
 # REPORT
 File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add-each-array-element-to-the-lines-of-a-file-in-ruby
@@ -70,6 +67,8 @@ File.open(report, 'w+') do |f| #https://stackoverflow.com/questions/18900474/add
   
 end
 
+indirects=0
+directs=0
 members=[]
 InteractionNetwork.get_all.each do |net|
   if net.members.count == 2
