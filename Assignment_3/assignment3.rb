@@ -24,7 +24,7 @@ def fetch(url, headers = {accept: "*/*"}, user = "", pass="")
       return response  # now we are returning 'False', and we will check that with an \"if\" statement in our main code
 end
 
-def get_agi(file)
+def get_embl(file)
   genes=Hash.new
     File.open(file).each do |code|
       code.strip!
@@ -36,3 +36,6 @@ def get_agi(file)
     end
   return genes
 end
+
+sequence = Bio::Sequence.auto("AAAACCTCCTAGAGGGAGGAGGAGGAAAAA")
+sequence.output(:embl)
