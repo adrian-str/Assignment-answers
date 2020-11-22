@@ -41,9 +41,10 @@ end
 #seq_embl=sequence.output(:embl)
 
 def scan_exons(genes)
-  repf= Bio::Sequence.auto("CTTCTT")
-  repr=repf.reverse_complement
-  genes.each_value do |embl|
+  repf=(Bio::Sequence::NA.new("CTTCTT")).to_re
+  repr=(Bio::Sequence::NA.new("AAGAAG")).to_re
+  bioseq=Hash.new
+  genes.each do |code,embl|
     bio_seq=embl.to_biosequence
     next unless embl.seq.match(repf) or embl.seq.match(repr)
     embl.features do |feature|
@@ -64,18 +65,44 @@ def scan_exons(genes)
         
       end
     end
+    bioseq[code]=bio_seq
   end
 end
 
 def add_features(pos,strand)
-  ft=Bio::Feature.new('repeat',(puts pos))
-  ft.append(Bio::Feature::Qualifier.new('repeat','cttctt'))
+  ft=Bio::Feature.new('myrepeat',pos)
+  ft.append(Bio::Feature::Qualifier.new('repeat_motif','cttctt'))
   ft.append(Bio::Feature::Qualifier.new('function','insertion site'))
   if strand == 1
-		f.append(Bio::Feature::Qualifier.new('strand', '+'))
+		ft.append(Bio::Feature::Qualifier.new('strand', '+'))
   elsif strand == -1
-		f.append(Bio::Feature::Qualifier.new('strand', '-'))
+		ft.append(Bio::Feature::Qualifier.new('strand', '-'))
   end
   
-end  
-  
+end
+
+def write_gff3_genes(bioseq,source="BioRuby",type="direct_repeat",score=".",phase=".")
+  File.open(genes_report.gff3, 'w+') do |g|
+    g.puts("##gff-version 3")
+    bioseq.each do |code,bio_seq|
+      bio_seq.features.each do |feature|
+        next unless feature.feature == 'myrepeat'
+        pos=feature.locations.first
+        strand=feature.assoc['strand']
+        attributes="ID=CTTCTT_insertional_repeat; Note=#{feature.position}"
+        g.puts("#{code}\tsource\t#{type}\t#{pos.from}\t#{pos.to}\t#{score}\t#{strand}\t#{phase}\t#{attributes}")
+      end
+    end
+  end  
+end
+def write_gff3_chr(bioseq,source="BioRuby",type="direct_repeat",score=".",phase=".")
+  File.open(chr_report.gff3, 'w+') do |g|
+   g.puts("##gff-version 3")
+    bioseq.each do |code,bio_seq|
+      bio_seq.features.each do |feature|
+        next unless feature.feature == 'myrepeat'
+        
+      end
+    end
+  end  
+end
