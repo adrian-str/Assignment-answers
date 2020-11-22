@@ -53,12 +53,12 @@ def scan_exons(genes)
         if location.strand == 1
           if exon_seq.match(repf)
             positionf = [exon_seq.match(repf).begin(0),exon_seq.match(repf).end(0)].join('..')
-            bio_seq.features << add_features(positionf,location.strand)
+            bio_seq.features << add_features("(#{positionf})",location.strand)
           end
         elsif location.strand == -1
           if exon_seq.match(repr)
             positionr = [exon_seq.match(repr).begin(0),exon_seq.match(repr).end(0)].join('..')
-            bio_seq.features << add_features(positionr,location.strand)
+            bio_seq.features << add_features("complement(#{positionr})",location.strand)
           end
         end
         
@@ -68,12 +68,12 @@ def scan_exons(genes)
 end
 
 def add_features(pos,strand)
-  ft=Bio::Feature.new('repeat',pos)
+  ft=Bio::Feature.new('repeat',(puts pos))
   ft.append(Bio::Feature::Qualifier.new('repeat','cttctt'))
   ft.append(Bio::Feature::Qualifier.new('function','insertion site'))
   if strand == 1
 		f.append(Bio::Feature::Qualifier.new('strand', '+'))
-	elsif strand == -1
+  elsif strand == -1
 		f.append(Bio::Feature::Qualifier.new('strand', '-'))
   end
   
