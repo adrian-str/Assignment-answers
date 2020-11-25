@@ -45,28 +45,38 @@ def scan_exons(genes)
   repf=(Bio::Sequence::NA.new("CTTCTT")).to_re
   repr=(Bio::Sequence::NA.new("AAGAAG")).to_re
   @bioseq=Hash.new
+  added=[]
   genes.each do |code,embl|
     bio_seq=embl.to_biosequence
     next unless embl.seq.match(repf) or embl.seq.match(repr)
     embl.features do |feature|
       next unless feature.feature == "exon"
+      
       feature.locations.each do |location|
+        
+
         exon_seq=embl.seq[location.from..location.to]
         next if exon_seq.nil?
         if location.strand == 1
           if exon_seq.match(repf)
             positionf = [exon_seq.match(repf).begin(0),exon_seq.match(repf).end(0)].join('..')
-            bio_seq.features << add_features("#{positionf}",location.strand)
+            
+            bio_seq.features << add_features("#{positionf}",location.strand) unless added.include?([code,positionf])
+            added << [code,positionf]#don't add same feature more than once
           end
         elsif location.strand == -1
           if exon_seq.match(repr)
             positionr = [exon_seq.match(repr).begin(0),exon_seq.match(repr).end(0)].join('..')
-            bio_seq.features << add_features("complement(#{positionr})",location.strand)
+            
+            bio_seq.features << add_features("complement(#{positionr})",location.strand) unless added.include?([code,positionr])
+            added << [code,positionr]
           end
+        @bioseq[code]=bio_seq   
         end
+        
       end
     end
-    @bioseq[code]=bio_seq
+
   end
 end
 
@@ -85,13 +95,13 @@ def write_gff3_genes(bioseq,source="BioRuby",type="direct_repeat",score=".",phas
   File.open('genes_report.gff3', 'w+') do |g|
     g.puts("##gff-version 3")
     @bioseq.each do |code,bio_seq|
-      count=0
+      counts=0
       bio_seq.features.each do |feature|
-        count+=1
+        counts+=1
         next unless feature.feature == 'myrepeat'
         pos=feature.locations.first 
         strand=feature.assoc['strand']
-        attributes="ID=CTTCTT_insertional_repeat_#{count}; Note= position:#{feature.position}"
+        attributes="ID=CTTCTT_insertional_repeat_#{counts}; Note= position:#{feature.position}"
         g.puts("#{code}\t#{source}\t#{type}\t#{pos.from}\t#{pos.to}\t#{score}\t#{strand}\t#{phase}\t#{attributes}")
       end
     end
@@ -99,7 +109,7 @@ def write_gff3_genes(bioseq,source="BioRuby",type="direct_repeat",score=".",phas
 end
 
 def write_gff3_chr(bioseq,source="BioRuby",type="direct_repeat",score=".",phase=".")
-  File.open(chr_report.gff3, 'w+') do |g|
+  File.open('chr_report.gff3', 'w+') do |g|
    g.puts("##gff-version 3")
     @bioseq.each do |code,bio_seq|
       bio_seq.features.each do |feature|
@@ -110,6 +120,20 @@ def write_gff3_chr(bioseq,source="BioRuby",type="direct_repeat",score=".",phase=
   end  
 end
 
+def noreps_report(genes,bioseq)
+  count=0
+  File.open('loci_without_repeats.txt', 'w+') do |r|
+    r.puts("The following loci contain no CTTCTT repeats:")
+    genes.each do |k,v|
+      if !bioseq.keys.include?(k)
+        count+=1
+        r.puts("\t#{count} : #{k}")
+      end
+    end
+  end
+end  
+
 #get_embl(ARGV[0])
-#scan_exons(genes)
-#write_gff3_genes
+#scan_exons(@genes)
+#write_gff3_genes(@bioseq)
+#noreps_report(@genes,@bioseq)
