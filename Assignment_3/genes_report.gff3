@@ -1,0 +1,8 @@
+##gff-version 3
+AT1g71030	BioRuby	direct_repeat	342	348	.	-	.	ID=CTTCTT_insertional_repeat_122; Note=complement(342..348)
+AT1g71030	BioRuby	direct_repeat	223	229	.	-	.	ID=CTTCTT_insertional_repeat_123; Note=complement(223..229)
+AT1g71030	BioRuby	direct_repeat	7	13	.	-	.	ID=CTTCTT_insertional_repeat_124; Note=complement(7..13)
+AT1g71030	BioRuby	direct_repeat	274	280	.	-	.	ID=CTTCTT_insertional_repeat_125; Note=complement(274..280)
+AT1g71030	BioRuby	direct_repeat	7	13	.	-	.	ID=CTTCTT_insertional_repeat_126; Note=complement(7..13)
+AT3g54050	BioRuby	direct_repeat	94	100	.	+	.	ID=CTTCTT_insertional_repeat_137; Note=94..100
+AT3g54050	BioRuby	direct_repeat	149	155	.	+	.	ID=CTTCTT_insertional_repeat_138; Note=149..155
