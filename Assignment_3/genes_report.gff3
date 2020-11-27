@@ -1,100 +1,95 @@
 ##gff-version 3
-AT4g05180	BioRuby	direct_repeat	220	226	.	-	.	ID=CTTCTT_insertional_repeat_159; Note= position:complement(220..226)
-AT4g05180	BioRuby	direct_repeat	104	110	.	-	.	ID=CTTCTT_insertional_repeat_160; Note= position:complement(104..110)
-AT1g31330	BioRuby	direct_repeat	1	7	.	-	.	ID=CTTCTT_insertional_repeat_161; Note= position:complement(1..7)
-AT1g15820	BioRuby	direct_repeat	153	159	.	-	.	ID=CTTCTT_insertional_repeat_95; Note= position:complement(153..159)
-AT2g20670	BioRuby	direct_repeat	2	8	.	-	.	ID=CTTCTT_insertional_repeat_179; Note= position:complement(2..8)
-AT1g23740	BioRuby	direct_repeat	344	350	.	-	.	ID=CTTCTT_insertional_repeat_152; Note= position:complement(344..350)
-AT2g46340	BioRuby	direct_repeat	256	262	.	-	.	ID=CTTCTT_insertional_repeat_369; Note= position:complement(256..262)
-AT2g46340	BioRuby	direct_repeat	209	215	.	-	.	ID=CTTCTT_insertional_repeat_370; Note= position:complement(209..215)
-AT2g46340	BioRuby	direct_repeat	99	105	.	-	.	ID=CTTCTT_insertional_repeat_371; Note= position:complement(99..105)
-AT2g46340	BioRuby	direct_repeat	105	111	.	-	.	ID=CTTCTT_insertional_repeat_372; Note= position:complement(105..111)
-AT2g46340	BioRuby	direct_repeat	218	224	.	-	.	ID=CTTCTT_insertional_repeat_373; Note= position:complement(218..224)
-AT2g03750	BioRuby	direct_repeat	79	85	.	-	.	ID=CTTCTT_insertional_repeat_192; Note= position:complement(79..85)
-AT3g47470	BioRuby	direct_repeat	255	261	.	-	.	ID=CTTCTT_insertional_repeat_196; Note= position:complement(255..261)
-AT5g05690	BioRuby	direct_repeat	150	156	.	-	.	ID=CTTCTT_insertional_repeat_351; Note= position:complement(150..156)
-AT5g05690	BioRuby	direct_repeat	198	204	.	-	.	ID=CTTCTT_insertional_repeat_352; Note= position:complement(198..204)
-AT5g05690	BioRuby	direct_repeat	48	54	.	-	.	ID=CTTCTT_insertional_repeat_353; Note= position:complement(48..54)
-AT5g05690	BioRuby	direct_repeat	158	164	.	-	.	ID=CTTCTT_insertional_repeat_354; Note= position:complement(158..164)
-AT5g05690	BioRuby	direct_repeat	99	105	.	-	.	ID=CTTCTT_insertional_repeat_355; Note= position:complement(99..105)
-AT5g64410	BioRuby	direct_repeat	299	305	.	-	.	ID=CTTCTT_insertional_repeat_404; Note= position:complement(299..305)
-AT2g21330	BioRuby	direct_repeat	186	192	.	-	.	ID=CTTCTT_insertional_repeat_182; Note= position:complement(186..192)
-AT2g21330	BioRuby	direct_repeat	211	217	.	-	.	ID=CTTCTT_insertional_repeat_183; Note= position:complement(211..217)
-AT2g21330	BioRuby	direct_repeat	162	168	.	-	.	ID=CTTCTT_insertional_repeat_184; Note= position:complement(162..168)
-AT5g07020	BioRuby	direct_repeat	46	52	.	-	.	ID=CTTCTT_insertional_repeat_160; Note= position:complement(46..52)
-AT3g01500	BioRuby	direct_repeat	97	103	.	-	.	ID=CTTCTT_insertional_repeat_319; Note= position:complement(97..103)
-AT1g25230	BioRuby	direct_repeat	141	147	.	-	.	ID=CTTCTT_insertional_repeat_248; Note= position:complement(141..147)
-AT1g25230	BioRuby	direct_repeat	108	114	.	-	.	ID=CTTCTT_insertional_repeat_249; Note= position:complement(108..114)
-AT1g25230	BioRuby	direct_repeat	366	372	.	-	.	ID=CTTCTT_insertional_repeat_250; Note= position:complement(366..372)
-AT1g18060	BioRuby	direct_repeat	103	109	.	-	.	ID=CTTCTT_insertional_repeat_105; Note= position:complement(103..109)
-AT3g21670	BioRuby	direct_repeat	150	156	.	-	.	ID=CTTCTT_insertional_repeat_187; Note= position:complement(150..156)
-AT3g21670	BioRuby	direct_repeat	320	326	.	-	.	ID=CTTCTT_insertional_repeat_188; Note= position:complement(320..326)
-AT1g12780	BioRuby	direct_repeat	201	207	.	-	.	ID=CTTCTT_insertional_repeat_259; Note= position:complement(201..207)
-AT1g12780	BioRuby	direct_repeat	186	192	.	-	.	ID=CTTCTT_insertional_repeat_260; Note= position:complement(186..192)
-AT2g17880	BioRuby	direct_repeat	482	488	.	-	.	ID=CTTCTT_insertional_repeat_167; Note= position:complement(482..488)
-AT3g49160	BioRuby	direct_repeat	55	61	.	-	.	ID=CTTCTT_insertional_repeat_379; Note= position:complement(55..61)
-AT2g39730	BioRuby	direct_repeat	18	24	.	-	.	ID=CTTCTT_insertional_repeat_159; Note= position:complement(18..24)
-AT2g39730	BioRuby	direct_repeat	29	35	.	-	.	ID=CTTCTT_insertional_repeat_160; Note= position:complement(29..35)
-AT2g39730	BioRuby	direct_repeat	260	266	.	-	.	ID=CTTCTT_insertional_repeat_161; Note= position:complement(260..266)
-AT2g39730	BioRuby	direct_repeat	78	84	.	-	.	ID=CTTCTT_insertional_repeat_162; Note= position:complement(78..84)
-AT1g12900	BioRuby	direct_repeat	132	138	.	-	.	ID=CTTCTT_insertional_repeat_95; Note= position:complement(132..138)
-AT1g12900	BioRuby	direct_repeat	40	46	.	-	.	ID=CTTCTT_insertional_repeat_96; Note= position:complement(40..46)
-AT1g12900	BioRuby	direct_repeat	216	222	.	-	.	ID=CTTCTT_insertional_repeat_97; Note= position:complement(216..222)
-AT1g12900	BioRuby	direct_repeat	212	218	.	-	.	ID=CTTCTT_insertional_repeat_98; Note= position:complement(212..218)
-AT2g25200	BioRuby	direct_repeat	425	431	.	-	.	ID=CTTCTT_insertional_repeat_137; Note= position:complement(425..431)
-AT5g15850	BioRuby	direct_repeat	139	145	.	+	.	ID=CTTCTT_insertional_repeat_96; Note= position:139..145
-AT5g15850	BioRuby	direct_repeat	584	590	.	+	.	ID=CTTCTT_insertional_repeat_97; Note= position:584..590
-AT5g15850	BioRuby	direct_repeat	781	787	.	-	.	ID=CTTCTT_insertional_repeat_98; Note= position:complement(781..787)
-AT5g17300	BioRuby	direct_repeat	356	362	.	-	.	ID=CTTCTT_insertional_repeat_250; Note= position:complement(356..362)
-AT5g17300	BioRuby	direct_repeat	82	88	.	-	.	ID=CTTCTT_insertional_repeat_251; Note= position:complement(82..88)
-AT1g64720	BioRuby	direct_repeat	72	78	.	-	.	ID=CTTCTT_insertional_repeat_327; Note= position:complement(72..78)
-AT1g64720	BioRuby	direct_repeat	105	111	.	-	.	ID=CTTCTT_insertional_repeat_328; Note= position:complement(105..111)
-AT1g64720	BioRuby	direct_repeat	18	24	.	-	.	ID=CTTCTT_insertional_repeat_329; Note= position:complement(18..24)
-AT1g64720	BioRuby	direct_repeat	41	47	.	-	.	ID=CTTCTT_insertional_repeat_330; Note= position:complement(41..47)
-AT2g26080	BioRuby	direct_repeat	93	99	.	-	.	ID=CTTCTT_insertional_repeat_305; Note= position:complement(93..99)
-AT2g26080	BioRuby	direct_repeat	1139	1145	.	-	.	ID=CTTCTT_insertional_repeat_306; Note= position:complement(1139..1145)
-AT3g56940	BioRuby	direct_repeat	28	34	.	+	.	ID=CTTCTT_insertional_repeat_98; Note= position:28..34
-AT3g56940	BioRuby	direct_repeat	76	82	.	+	.	ID=CTTCTT_insertional_repeat_99; Note= position:76..82
-AT3g56940	BioRuby	direct_repeat	311	317	.	+	.	ID=CTTCTT_insertional_repeat_100; Note= position:311..317
-AT3g56940	BioRuby	direct_repeat	165	171	.	+	.	ID=CTTCTT_insertional_repeat_101; Note= position:165..171
-AT3g21870	BioRuby	direct_repeat	286	292	.	-	.	ID=CTTCTT_insertional_repeat_100; Note= position:complement(286..292)
-AT3g48360	BioRuby	direct_repeat	173	179	.	-	.	ID=CTTCTT_insertional_repeat_442; Note= position:complement(173..179)
-AT3g48360	BioRuby	direct_repeat	481	487	.	-	.	ID=CTTCTT_insertional_repeat_443; Note= position:complement(481..487)
-AT5g11070	BioRuby	direct_repeat	891	897	.	-	.	ID=CTTCTT_insertional_repeat_76; Note= position:complement(891..897)
-AT1g23205	BioRuby	direct_repeat	244	250	.	-	.	ID=CTTCTT_insertional_repeat_92; Note= position:complement(244..250)
-AT4g28750	BioRuby	direct_repeat	91	97	.	-	.	ID=CTTCTT_insertional_repeat_117; Note= position:complement(91..97)
-AT1g71030	BioRuby	direct_repeat	7	13	.	-	.	ID=CTTCTT_insertional_repeat_122; Note= position:complement(7..13)
-AT1g71030	BioRuby	direct_repeat	274	280	.	-	.	ID=CTTCTT_insertional_repeat_123; Note= position:complement(274..280)
-AT1g71030	BioRuby	direct_repeat	223	229	.	-	.	ID=CTTCTT_insertional_repeat_124; Note= position:complement(223..229)
-AT1g71030	BioRuby	direct_repeat	342	348	.	-	.	ID=CTTCTT_insertional_repeat_125; Note= position:complement(342..348)
-AT3g54890	BioRuby	direct_repeat	126	132	.	-	.	ID=CTTCTT_insertional_repeat_159; Note= position:complement(126..132)
-AT1g68570	BioRuby	direct_repeat	116	122	.	+	.	ID=CTTCTT_insertional_repeat_344; Note= position:116..122
-AT2g30950	BioRuby	direct_repeat	151	157	.	+	.	ID=CTTCTT_insertional_repeat_196; Note= position:151..157
-AT2g30950	BioRuby	direct_repeat	141	147	.	+	.	ID=CTTCTT_insertional_repeat_197; Note= position:141..147
-AT2g30950	BioRuby	direct_repeat	306	312	.	+	.	ID=CTTCTT_insertional_repeat_198; Note= position:306..312
-AT2g30950	BioRuby	direct_repeat	5	11	.	-	.	ID=CTTCTT_insertional_repeat_199; Note= position:complement(5..11)
-AT4g33660	BioRuby	direct_repeat	797	803	.	-	.	ID=CTTCTT_insertional_repeat_116; Note= position:complement(797..803)
-AT3g16250	BioRuby	direct_repeat	123	129	.	-	.	ID=CTTCTT_insertional_repeat_143; Note= position:complement(123..129)
-AT3g63140	BioRuby	direct_repeat	97	103	.	-	.	ID=CTTCTT_insertional_repeat_110; Note= position:complement(97..103)
-AT3g63140	BioRuby	direct_repeat	241	247	.	-	.	ID=CTTCTT_insertional_repeat_111; Note= position:complement(241..247)
-AT3g63140	BioRuby	direct_repeat	58	64	.	+	.	ID=CTTCTT_insertional_repeat_112; Note= position:58..64
-AT1g76080	BioRuby	direct_repeat	475	481	.	-	.	ID=CTTCTT_insertional_repeat_132; Note= position:complement(475..481)
-AT2g47930	BioRuby	direct_repeat	110	116	.	-	.	ID=CTTCTT_insertional_repeat_47; Note= position:complement(110..116)
-AT4g02530	BioRuby	direct_repeat	75	81	.	-	.	ID=CTTCTT_insertional_repeat_285; Note= position:complement(75..81)
-AT4g02530	BioRuby	direct_repeat	12	18	.	-	.	ID=CTTCTT_insertional_repeat_286; Note= position:complement(12..18)
-AT4g38840	BioRuby	direct_repeat	413	419	.	-	.	ID=CTTCTT_insertional_repeat_40; Note= position:complement(413..419)
-AT3g50820	BioRuby	direct_repeat	86	92	.	-	.	ID=CTTCTT_insertional_repeat_146; Note= position:complement(86..92)
-AT4g37610	BioRuby	direct_repeat	0	6	.	-	.	ID=CTTCTT_insertional_repeat_122; Note= position:complement(0..6)
-AT4g37610	BioRuby	direct_repeat	316	322	.	-	.	ID=CTTCTT_insertional_repeat_123; Note= position:complement(316..322)
-AT4g37610	BioRuby	direct_repeat	191	197	.	-	.	ID=CTTCTT_insertional_repeat_124; Note= position:complement(191..197)
-AT1g76100	BioRuby	direct_repeat	705	711	.	-	.	ID=CTTCTT_insertional_repeat_102; Note= position:complement(705..711)
-AT1g76100	BioRuby	direct_repeat	809	815	.	-	.	ID=CTTCTT_insertional_repeat_103; Note= position:complement(809..815)
-AT1g08380	BioRuby	direct_repeat	354	360	.	-	.	ID=CTTCTT_insertional_repeat_52; Note= position:complement(354..360)
-AT4g04640	BioRuby	direct_repeat	204	210	.	-	.	ID=CTTCTT_insertional_repeat_82; Note= position:complement(204..210)
-AT4g39710	BioRuby	direct_repeat	163	169	.	-	.	ID=CTTCTT_insertional_repeat_213; Note= position:complement(163..169)
-AT1g20440	BioRuby	direct_repeat	4	10	.	-	.	ID=CTTCTT_insertional_repeat_158; Note= position:complement(4..10)
-AT4g09010	BioRuby	direct_repeat	10	16	.	-	.	ID=CTTCTT_insertional_repeat_213; Note= position:complement(10..16)
-AT4g09010	BioRuby	direct_repeat	109	115	.	-	.	ID=CTTCTT_insertional_repeat_214; Note= position:complement(109..115)
-AT5g49360	BioRuby	direct_repeat	31	37	.	-	.	ID=CTTCTT_insertional_repeat_326; Note= position:complement(31..37)
-AT5g49360	BioRuby	direct_repeat	210	216	.	-	.	ID=CTTCTT_insertional_repeat_327; Note= position:complement(210..216)
-AT3g16140	BioRuby	direct_repeat	292	298	.	-	.	ID=CTTCTT_insertional_repeat_161; Note= position:complement(292..298)
+AT4g05180	BioRuby	direct_repeat	220	225	.	-	.	ID=CTTCTT_insertional_repeat_AT4g05180_1;
+AT4g05180	BioRuby	direct_repeat	104	109	.	-	.	ID=CTTCTT_insertional_repeat_AT4g05180_2;
+AT1g31330	BioRuby	direct_repeat	1	6	.	-	.	ID=CTTCTT_insertional_repeat_AT1g31330_1;
+AT1g15820	BioRuby	direct_repeat	153	158	.	-	.	ID=CTTCTT_insertional_repeat_AT1g15820_1;
+AT2g20670	BioRuby	direct_repeat	2	7	.	-	.	ID=CTTCTT_insertional_repeat_AT2g20670_1;
+AT1g23740	BioRuby	direct_repeat	344	349	.	-	.	ID=CTTCTT_insertional_repeat_AT1g23740_1;
+AT2g46340	BioRuby	direct_repeat	99	104	.	-	.	ID=CTTCTT_insertional_repeat_AT2g46340_1;
+AT2g46340	BioRuby	direct_repeat	256	261	.	-	.	ID=CTTCTT_insertional_repeat_AT2g46340_2;
+AT2g46340	BioRuby	direct_repeat	105	110	.	-	.	ID=CTTCTT_insertional_repeat_AT2g46340_3;
+AT2g46340	BioRuby	direct_repeat	209	214	.	-	.	ID=CTTCTT_insertional_repeat_AT2g46340_4;
+AT2g46340	BioRuby	direct_repeat	218	223	.	-	.	ID=CTTCTT_insertional_repeat_AT2g46340_5;
+AT2g03750	BioRuby	direct_repeat	79	84	.	-	.	ID=CTTCTT_insertional_repeat_AT2g03750_1;
+AT3g47470	BioRuby	direct_repeat	255	260	.	-	.	ID=CTTCTT_insertional_repeat_AT3g47470_1;
+AT5g05690	BioRuby	direct_repeat	99	104	.	-	.	ID=CTTCTT_insertional_repeat_AT5g05690_1;
+AT5g05690	BioRuby	direct_repeat	48	53	.	-	.	ID=CTTCTT_insertional_repeat_AT5g05690_2;
+AT5g05690	BioRuby	direct_repeat	150	155	.	-	.	ID=CTTCTT_insertional_repeat_AT5g05690_3;
+AT5g05690	BioRuby	direct_repeat	158	163	.	-	.	ID=CTTCTT_insertional_repeat_AT5g05690_4;
+AT5g05690	BioRuby	direct_repeat	198	203	.	-	.	ID=CTTCTT_insertional_repeat_AT5g05690_5;
+AT5g64410	BioRuby	direct_repeat	299	304	.	-	.	ID=CTTCTT_insertional_repeat_AT5g64410_1;
+AT2g21330	BioRuby	direct_repeat	162	167	.	-	.	ID=CTTCTT_insertional_repeat_AT2g21330_1;
+AT2g21330	BioRuby	direct_repeat	211	216	.	-	.	ID=CTTCTT_insertional_repeat_AT2g21330_2;
+AT2g21330	BioRuby	direct_repeat	186	191	.	-	.	ID=CTTCTT_insertional_repeat_AT2g21330_3;
+AT5g07020	BioRuby	direct_repeat	46	51	.	-	.	ID=CTTCTT_insertional_repeat_AT5g07020_1;
+AT3g01500	BioRuby	direct_repeat	97	102	.	-	.	ID=CTTCTT_insertional_repeat_AT3g01500_1;
+AT1g25230	BioRuby	direct_repeat	141	146	.	-	.	ID=CTTCTT_insertional_repeat_AT1g25230_1;
+AT1g25230	BioRuby	direct_repeat	108	113	.	-	.	ID=CTTCTT_insertional_repeat_AT1g25230_2;
+AT1g25230	BioRuby	direct_repeat	366	371	.	-	.	ID=CTTCTT_insertional_repeat_AT1g25230_3;
+AT1g18060	BioRuby	direct_repeat	103	108	.	-	.	ID=CTTCTT_insertional_repeat_AT1g18060_1;
+AT3g21670	BioRuby	direct_repeat	320	325	.	-	.	ID=CTTCTT_insertional_repeat_AT3g21670_1;
+AT3g21670	BioRuby	direct_repeat	150	155	.	-	.	ID=CTTCTT_insertional_repeat_AT3g21670_2;
+AT1g12780	BioRuby	direct_repeat	201	206	.	-	.	ID=CTTCTT_insertional_repeat_AT1g12780_1;
+AT1g12780	BioRuby	direct_repeat	186	191	.	-	.	ID=CTTCTT_insertional_repeat_AT1g12780_2;
+AT2g17880	BioRuby	direct_repeat	482	487	.	-	.	ID=CTTCTT_insertional_repeat_AT2g17880_1;
+AT3g49160	BioRuby	direct_repeat	55	60	.	-	.	ID=CTTCTT_insertional_repeat_AT3g49160_1;
+AT2g39730	BioRuby	direct_repeat	29	34	.	-	.	ID=CTTCTT_insertional_repeat_AT2g39730_1;
+AT2g39730	BioRuby	direct_repeat	18	23	.	-	.	ID=CTTCTT_insertional_repeat_AT2g39730_2;
+AT2g39730	BioRuby	direct_repeat	78	83	.	-	.	ID=CTTCTT_insertional_repeat_AT2g39730_3;
+AT2g39730	BioRuby	direct_repeat	260	265	.	-	.	ID=CTTCTT_insertional_repeat_AT2g39730_4;
+AT1g12900	BioRuby	direct_repeat	40	45	.	-	.	ID=CTTCTT_insertional_repeat_AT1g12900_1;
+AT1g12900	BioRuby	direct_repeat	132	137	.	-	.	ID=CTTCTT_insertional_repeat_AT1g12900_2;
+AT1g12900	BioRuby	direct_repeat	212	217	.	-	.	ID=CTTCTT_insertional_repeat_AT1g12900_3;
+AT1g12900	BioRuby	direct_repeat	216	221	.	-	.	ID=CTTCTT_insertional_repeat_AT1g12900_4;
+AT2g25200	BioRuby	direct_repeat	425	430	.	-	.	ID=CTTCTT_insertional_repeat_AT2g25200_1;
+AT5g15850	BioRuby	direct_repeat	140	145	.	+	.	ID=CTTCTT_insertional_repeat_AT5g15850_1;
+AT5g15850	BioRuby	direct_repeat	585	590	.	+	.	ID=CTTCTT_insertional_repeat_AT5g15850_2;
+AT5g15850	BioRuby	direct_repeat	781	786	.	-	.	ID=CTTCTT_insertional_repeat_AT5g15850_3;
+AT5g17300	BioRuby	direct_repeat	356	361	.	-	.	ID=CTTCTT_insertional_repeat_AT5g17300_1;
+AT5g17300	BioRuby	direct_repeat	82	87	.	-	.	ID=CTTCTT_insertional_repeat_AT5g17300_2;
+AT1g64720	BioRuby	direct_repeat	18	23	.	-	.	ID=CTTCTT_insertional_repeat_AT1g64720_1;
+AT1g64720	BioRuby	direct_repeat	72	77	.	-	.	ID=CTTCTT_insertional_repeat_AT1g64720_2;
+AT1g64720	BioRuby	direct_repeat	105	110	.	-	.	ID=CTTCTT_insertional_repeat_AT1g64720_3;
+AT1g64720	BioRuby	direct_repeat	41	46	.	-	.	ID=CTTCTT_insertional_repeat_AT1g64720_4;
+AT2g26080	BioRuby	direct_repeat	93	98	.	-	.	ID=CTTCTT_insertional_repeat_AT2g26080_1;
+AT2g26080	BioRuby	direct_repeat	1139	1144	.	-	.	ID=CTTCTT_insertional_repeat_AT2g26080_2;
+AT3g21870	BioRuby	direct_repeat	286	291	.	-	.	ID=CTTCTT_insertional_repeat_AT3g21870_1;
+AT3g48360	BioRuby	direct_repeat	173	178	.	-	.	ID=CTTCTT_insertional_repeat_AT3g48360_1;
+AT3g48360	BioRuby	direct_repeat	481	486	.	-	.	ID=CTTCTT_insertional_repeat_AT3g48360_2;
+AT5g11070	BioRuby	direct_repeat	891	896	.	-	.	ID=CTTCTT_insertional_repeat_AT5g11070_1;
+AT1g23205	BioRuby	direct_repeat	244	249	.	-	.	ID=CTTCTT_insertional_repeat_AT1g23205_1;
+AT4g28750	BioRuby	direct_repeat	91	96	.	-	.	ID=CTTCTT_insertional_repeat_AT4g28750_1;
+AT1g71030	BioRuby	direct_repeat	223	228	.	-	.	ID=CTTCTT_insertional_repeat_AT1g71030_1;
+AT1g71030	BioRuby	direct_repeat	342	347	.	-	.	ID=CTTCTT_insertional_repeat_AT1g71030_2;
+AT1g71030	BioRuby	direct_repeat	274	279	.	-	.	ID=CTTCTT_insertional_repeat_AT1g71030_3;
+AT1g71030	BioRuby	direct_repeat	7	12	.	-	.	ID=CTTCTT_insertional_repeat_AT1g71030_4;
+AT3g54890	BioRuby	direct_repeat	126	131	.	-	.	ID=CTTCTT_insertional_repeat_AT3g54890_1;
+AT2g30950	BioRuby	direct_repeat	152	157	.	+	.	ID=CTTCTT_insertional_repeat_AT2g30950_1;
+AT2g30950	BioRuby	direct_repeat	307	312	.	+	.	ID=CTTCTT_insertional_repeat_AT2g30950_2;
+AT2g30950	BioRuby	direct_repeat	142	147	.	+	.	ID=CTTCTT_insertional_repeat_AT2g30950_3;
+AT2g30950	BioRuby	direct_repeat	5	10	.	-	.	ID=CTTCTT_insertional_repeat_AT2g30950_4;
+AT4g33660	BioRuby	direct_repeat	797	802	.	-	.	ID=CTTCTT_insertional_repeat_AT4g33660_1;
+AT3g16250	BioRuby	direct_repeat	123	128	.	-	.	ID=CTTCTT_insertional_repeat_AT3g16250_1;
+AT3g63140	BioRuby	direct_repeat	97	102	.	-	.	ID=CTTCTT_insertional_repeat_AT3g63140_1;
+AT3g63140	BioRuby	direct_repeat	241	246	.	-	.	ID=CTTCTT_insertional_repeat_AT3g63140_2;
+AT3g63140	BioRuby	direct_repeat	59	64	.	+	.	ID=CTTCTT_insertional_repeat_AT3g63140_3;
+AT1g76080	BioRuby	direct_repeat	475	480	.	-	.	ID=CTTCTT_insertional_repeat_AT1g76080_1;
+AT2g47930	BioRuby	direct_repeat	110	115	.	-	.	ID=CTTCTT_insertional_repeat_AT2g47930_1;
+AT4g02530	BioRuby	direct_repeat	75	80	.	-	.	ID=CTTCTT_insertional_repeat_AT4g02530_1;
+AT4g02530	BioRuby	direct_repeat	12	17	.	-	.	ID=CTTCTT_insertional_repeat_AT4g02530_2;
+AT4g38840	BioRuby	direct_repeat	413	418	.	-	.	ID=CTTCTT_insertional_repeat_AT4g38840_1;
+AT3g50820	BioRuby	direct_repeat	86	91	.	-	.	ID=CTTCTT_insertional_repeat_AT3g50820_1;
+AT4g37610	BioRuby	direct_repeat	0	5	.	-	.	ID=CTTCTT_insertional_repeat_AT4g37610_1;
+AT4g37610	BioRuby	direct_repeat	191	196	.	-	.	ID=CTTCTT_insertional_repeat_AT4g37610_2;
+AT4g37610	BioRuby	direct_repeat	316	321	.	-	.	ID=CTTCTT_insertional_repeat_AT4g37610_3;
+AT1g76100	BioRuby	direct_repeat	705	710	.	-	.	ID=CTTCTT_insertional_repeat_AT1g76100_1;
+AT1g76100	BioRuby	direct_repeat	809	814	.	-	.	ID=CTTCTT_insertional_repeat_AT1g76100_2;
+AT1g08380	BioRuby	direct_repeat	354	359	.	-	.	ID=CTTCTT_insertional_repeat_AT1g08380_1;
+AT4g04640	BioRuby	direct_repeat	204	209	.	-	.	ID=CTTCTT_insertional_repeat_AT4g04640_1;
+AT4g39710	BioRuby	direct_repeat	163	168	.	-	.	ID=CTTCTT_insertional_repeat_AT4g39710_1;
+AT1g20440	BioRuby	direct_repeat	4	9	.	-	.	ID=CTTCTT_insertional_repeat_AT1g20440_1;
+AT4g09010	BioRuby	direct_repeat	10	15	.	-	.	ID=CTTCTT_insertional_repeat_AT4g09010_1;
+AT4g09010	BioRuby	direct_repeat	109	114	.	-	.	ID=CTTCTT_insertional_repeat_AT4g09010_2;
+AT5g49360	BioRuby	direct_repeat	31	36	.	-	.	ID=CTTCTT_insertional_repeat_AT5g49360_1;
+AT5g49360	BioRuby	direct_repeat	210	215	.	-	.	ID=CTTCTT_insertional_repeat_AT5g49360_2;
+AT3g16140	BioRuby	direct_repeat	292	297	.	-	.	ID=CTTCTT_insertional_repeat_AT3g16140_1;
