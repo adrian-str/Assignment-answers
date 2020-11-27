@@ -142,7 +142,7 @@ end
 
 
 puts "Starting to compute..."
-puts "This should take around 2 minutes"
+puts "This should take less than 5 minutes"
 get_embl(ARGV[0])
 
 scan_exons(@genes)
