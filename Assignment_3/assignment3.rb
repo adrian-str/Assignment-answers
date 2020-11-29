@@ -26,7 +26,7 @@ def fetch(url, headers = {accept: "*/*"}, user = "", pass="")
 end
 
 def get_embl(file)
-  @genes=Hash.new
+  @genes=Hash.new #instance variable hash to save the AGI Loci codes and their EMBL entries
     File.open(file).each do |code|
       code.strip!
       response = fetch("http://www.ebi.ac.uk/Tools/dbfetch/dbfetch?db=ensemblgenomesgene&format=embl&id=#{code}")
@@ -40,12 +40,12 @@ end
 
 def scan_exons(genes)
 
-  repf=(Bio::Sequence::NA.new("CTTCTT"))#.to_re
-  repr=(Bio::Sequence::NA.new("AAGAAG"))#.to_re
-  @bioseq=Hash.new
+  repf=(Bio::Sequence::NA.new("CTTCTT")).to_re # pattern searched for on the + strand
+  repr=(Bio::Sequence::NA.new("AAGAAG")).to_re # pattern searched for on the - strand
+  @bioseq=Hash.new # instance variable hash to save the AGI Loci codes and their Sequence entries
   
   genes.each do |code,embl|
-    added=[]
+    added=[] # local variable to keep track of added positions on each gene
     bio_seq=embl.to_biosequence
     embl.features do |feature|
       next unless feature.feature == "exon"
@@ -57,24 +57,25 @@ def scan_exons(genes)
         if location.strand == 1
           if exon_seq.match(repf)
             positionf = [exon_seq.match(repf).begin(0)+1,exon_seq.match(repf).end(0)].join('..')
-            bio_seq.features << add_features("#{positionf}",location.strand) unless added.include?(positionf) #don't add same feature more than once
+            bio_seq.features << add_features("#{positionf}",location.strand) unless added.include?(positionf) # don't add same feature more than once
+            @bioseq[code]=bio_seq
             added << positionf 
           end
         elsif location.strand == -1
           if exon_seq.match(repr)
             positionr = [exon_seq.match(repr).begin(0),exon_seq.match(repr).end(0)-1].join('..')
             bio_seq.features << add_features("complement(#{positionr})",location.strand) unless added.include?(positionr)
+            @bioseq[code]=bio_seq
             added << positionr
           end
-        @bioseq[code]=bio_seq   
         end
       end
     end
   end
 end
 
-def add_features(pos,strand)
-  ft=Bio::Feature.new('myrepeat',pos)
+def add_features(pos,strand) # method implemented above to add new features to the Sequence entries
+  ft=Bio::Feature.new('myrepeat',pos) # unique feature type and its location
   ft.append(Bio::Feature::Qualifier.new('repeat_motif','cttctt'))
   ft.append(Bio::Feature::Qualifier.new('function','insertion site'))
   if strand == 1
@@ -85,17 +86,17 @@ def add_features(pos,strand)
 end
 
 def write_gff3_genes(bioseq,source="BioRuby",type="direct_repeat",score=".",phase=".")
-  
+  # method that takes the @bioseq instance variable to create the first gff3 report
   File.open('genes_report.gff3', 'w+') do |g|
     g.puts("##gff-version 3")
     @bioseq.each do |code,bio_seq|
-      counts=0
+      counts=0 # a counter to differentiate the repeats found in one gene
       bio_seq.features.each do |feature|
-        next unless feature.feature == 'myrepeat'
+        next unless feature.feature == 'myrepeat' # select the features added before
         counts+=1
-        pos=feature.locations.first 
-        strand=feature.assoc['strand']
-        attributes="ID=CTTCTT_insertional_repeat_#{code}_#{counts};"
+        pos=feature.locations.first # get the first Location object
+        strand=feature.assoc['strand'] # get the strand qualifier
+        attributes="ID=CTTCTT_insertional_repeat_#{code}_#{counts};" # add a different attribute for each feature
         g.puts("#{code}\t#{source}\t#{type}\t#{pos.from}\t#{pos.to}\t#{score}\t#{strand}\t#{phase}\t#{attributes}")
       end
     end
@@ -106,10 +107,10 @@ def write_gff3_chr(bioseq,source="BioRuby",type="direct_repeat",score=".",phase=
   
   File.open('chr_report.gff3', 'w+') do |c|
    c.puts("##gff-version 3")
-   # chromosome:TAIR10:3:20119140:20121314:1 (primary accession)
+   # [0]chromosome:[1]TAIR10:[2]3:[3]20119140:20121314:1 (primary accession)
     @bioseq.each do |code,bio_seq|
-      chr_coords=bio_seq.primary_accession.split(":")[3]
-      seqid=bio_seq.entry_id.strip
+      chr_coords=bio_seq.primary_accession.split(":")[3] # select the beginning position of the chromosome
+      seqid=bio_seq.primary_accession.split(":")[2] # select the chromosome number
       counts=0
       bio_seq.features.each do |feature|
         next unless feature.feature == 'myrepeat'
@@ -117,7 +118,7 @@ def write_gff3_chr(bioseq,source="BioRuby",type="direct_repeat",score=".",phase=
         pos=feature.locations.first
         strand=feature.assoc['strand']
         attributes="ID=CTTCTT_insertional_repeat_#{code}_#{counts};"
-        first=chr_coords.to_i+pos.from
+        first=chr_coords.to_i+pos.from # create the locations relative to the chromosome beginning position
         last=chr_coords.to_i+pos.to
         c.puts("#{seqid}\t#{source}\t#{type}\t#{first}\t#{last}\t#{score}\t#{strand}\t#{phase}\t#{attributes}")
       end
@@ -125,22 +126,21 @@ def write_gff3_chr(bioseq,source="BioRuby",type="direct_repeat",score=".",phase=
   end
 end
 
-def noreps_report(genes,bioseq)
-  count=0
+def noreps_report(genes,bioseq) # create a report of the loci for which no repeats have been found
+  @count=0 # to count
   File.open('loci_without_repeats.txt', 'w+') do |r|
     r.puts("The following loci contain no CTTCTT repeats:")
     genes.each do |k,v|
-      unless bioseq.keys.include?(k)
-        count+=1
-        r.puts("\t#{count} : #{k}")
+      unless bioseq.keys.include?(k) # the loci codes that are not in the @bioseq variable are the ones for which the repeat has not been found
+        @count+=1
+        r.puts("\t#{@count} : #{k}")
       end
     end
   end
+  return @count
 end
 
-
-
-
+# Script to develop the program
 puts "Starting to compute..."
 puts "This should take less than 5 minutes"
 get_embl(ARGV[0])
@@ -159,4 +159,4 @@ puts "Writing GFF3 file with chromosomes coordinates"
 
 noreps_report(@genes,@bioseq)
 
-puts "Created report with genes that don't have CTTCTT repeat"
+puts "Created report with genes that don't have CTTCTT repeat (#{@count} genes)"
