@@ -24,8 +24,8 @@ def make_db(flatfasta,fasta)
 end
 
 def blast(db,query,type)
- eval='-e 0.0001'
- factory=Bio::Blast.local(type,"#{File.dirname(db)}/#{File.basename(db,".fa")}",eval)
+ eval='-e 1e-6' #https://doi.org/10.1371/journal.pone.0101850
+ factory=Bio::Blast.local(type,"#{File.dirname(db)}/#{File.basename(db,".fa")}",eval,-F "m S", -s T)#https://doi.org/10.1093/bioinformatics/btm585
  report=factory.query(query)
  return report.hits[0]
 end
