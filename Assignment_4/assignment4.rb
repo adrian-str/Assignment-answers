@@ -2,6 +2,9 @@
 require 'bio'
 arath=ARGV[0]
 spomb=ARGV[1]
+unless arath && spomb 
+  abort "run this using the command\n ruby assignment4.rb ./databases/arath.fa ./databases/spombe.fa"
+end
 araf=Bio::FlatFile.auto(arath)
 spof=Bio::FlatFile.auto(spomb)
 
@@ -22,7 +25,7 @@ end
 
 def blast(db,query,type)
  eval='-e 1e-6' #source: https://doi.org/10.1371/journal.pone.0101850
- factory=Bio::Blast.local("#{type}","#{File.dirname(db)}/#{File.basename(db,".fa")}","-F m S #{eval}" ) #source (-F): https://doi.org/10.1093/bioinformatics/btm585
+ factory=Bio::Blast.local("#{type}","#{File.dirname(db)}/#{File.basename(db,".fa")}","-F 'm S' #{eval}" ) #source (-F): https://doi.org/10.1093/bioinformatics/btm585
  report=factory.query(query)
  if report.hits[0]
   return report.hits[0].definition.split("|")[0].strip
@@ -41,12 +44,8 @@ end
 def get_besthit(db,flat,queries)
  besthit=Hash.new
  type=blast_type(flat,queries)
- #count=0
   queries.each_entry do |query|
-   #puts query.entry_id
    besthit[query.entry_id]=blast(db,query,type)
-   #break if count==20
-   #count+=1
   end
  return besthit
 end
@@ -69,10 +68,12 @@ make_db(spof,spomb)
 make_db(araf,arath)
 #get_besthit(arath,araf,spof)
 orthologues=get_orthologues(arath,spomb,araf,spof)
-
+count=0
 File.open('putative_orthologues.txt', 'w+') do |o|
  o.puts "Pairs of possible orthologues:"
  orthologues.each do |k,v|
   o.puts "\t- #{k} and #{v}"
+  count+=1
  end
 end
+puts "The number of putative orthologues detected is #{count}"

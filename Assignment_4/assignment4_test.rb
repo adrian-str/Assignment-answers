@@ -2,6 +2,9 @@
 require 'bio'
 arath=ARGV[0]
 spomb=ARGV[1]
+unless arath && spomb 
+  abort "run this using the command\n ruby assignment4_test.rb ./databases/arath.fa ./databases/spombe.fa"
+end
 araf=Bio::FlatFile.auto(arath)
 spof=Bio::FlatFile.auto(spomb)
 
