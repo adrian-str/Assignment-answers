@@ -1,0 +1,171 @@
+﻿Assignment 5 SPARQL queries
+
+
+I would like you to create the SPARQL query that will answer each of these questions.  Please submit the queries simply as a text document (NO programming is required!) - submit to GitHub as usual.  
+
+
+For many of these you will need to look-up how to use the SPARQL functions ‘COUNT’ and ‘DISTINCT’ (we used ‘distinct’ in class), and probably a few others...
+-----------------------------------------
+
+
+
+
+UniProt SPARQL Endpoint:  http://sparql.uniprot.org/sparql
+
+
+Q1: 1 POINT  How many protein records are in UniProt? 
+
+PREFIX up:<http://purl.uniprot.org/core/> 
+
+SELECT (COUNT (DISTINCT ?protein) AS ?proteincount)
+WHERE 
+{
+	?protein a up:Protein .
+}
+Result=322278757
+
+
+Q2: 1 POINT How many Arabidopsis thaliana protein records are in UniProt? 
+
+PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX taxon:<http://purl.uniprot.org/taxonomy/> 
+
+SELECT (COUNT(DISTINCT ?protein) AS ?proteincount)
+WHERE 
+{
+	?protein a up:Protein .
+	?protein up:organism taxon:3702 .
+}
+Result=121693
+
+Q3: 1 POINT retrieve pictures of Arabidopsis thaliana from UniProt? 
+
+SELECT ?image
+WHERE
+{
+	taxon:3702  <http://xmlns.com/foaf/0.1/depiction>  ?image .
+}
+
+
+Q4: 1 POINT:  What is the description of the enzyme activity of UniProt Protein Q9SZZ8 
+
+PREFIX rdfs:<http://www.w3.org/2000/01/rdf-schema#> 
+PREFIX up:<http://purl.uniprot.org/core/>
+PREFIX uniprotkb:<http://purl.uniprot.org/uniprot/>
+PREFIX skos:<http://www.w3.org/2004/02/skos/core#> 
+
+SELECT ?name ?activity
+WHERE
+{
+	uniprotkb:Q9SZZ8 up:enzyme ?enzyme .
+	?enzyme skos:prefLabel ?name .
+	?enzyme up:activity ?act .
+	?act rdfs:label ?activity.
+}
+Result= Beta-carotene + 4 reduced ferredoxin [iron-sulfur] cluster + 2 H(+) + 2 O(2) = zeaxanthin + 4 oxidized ferredoxin [iron-sulfur] cluster + 2 H(2)O.
+
+Q5: 1 POINT:  Retrieve the proteins ids, and date of submission, for proteins that have been added to UniProt this year   (HINT Google for “SPARQL FILTER by date”)
+
+PREFIX up:<http://purl.uniprot.org/core/> 
+
+SELECT ?id ?date 
+WHERE
+{
+	?protein a up:Protein . 
+	?protein up:created ?date .
+	BIND (SUBSTR(STR(?protein),33) AS ?id)
+	FILTER (?date >= '2020-01-01'^^xsd:date)
+}
+
+
+Q6: 1 POINT How  many species are in the UniProt taxonomy?
+
+PREFIX up:<http://purl.uniprot.org/core/> 
+ 
+SELECT (COUNT (DISTINCT ?species) AS ?speciesnum)
+WHERE
+{
+	?species a up:Taxon .
+	?species up:rank up:Species .
+}
+Result=1853022
+
+Q7: 2 POINT  How many species have at least one protein record? (this might take a long time to execute, so do this one last!)
+
+PREFIX up:<http://purl.uniprot.org/core/> 
+
+SELECT (COUNT(DISTINCT ?species) AS ?speciesnum)
+WHERE 
+{
+	?protein a up:Protein .
+	?protein up:organism ?species .
+	?species a up:Taxon .
+	?species up:rank up:Species .
+}
+Result=1028449
+
+Q8: 3 points:  find the AGI codes and gene names for all Arabidopsis thaliana  proteins that have a protein function annotation description that mentions “pattern formation”
+
+SELECT ?name ?agi
+WHERE
+{
+	?protein a up:Protein .
+	?protein up:organism taxon:3702 .
+  	?protein up:recommendedName ?n . 
+	?n up:shortName ?name . 
+	?protein up:encodedBy ?gene .
+	?gene up:locusName ?agi .
+	?protein up:annotation  ?annotation .
+	?annotation a up:Function_Annotation .
+	?annotation rdfs:comment ?comment .
+	FILTER regex( ?comment, 'pattern formation','i')
+}
+
+From the MetaNetX metabolic networks for metagenomics database SPARQL Endpoint: https://rdf.metanetx.org/sparql
+
+
+
+
+Q9: 4 POINTS:  what is the MetaNetX Reaction identifier (starts with “mnxr”) for the UniProt Protein uniprotkb:Q18A79
+
+PREFIX mnx: <https://rdf.metanetx.org/schema/>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX up: <http://purl.uniprot.org/uniprot/>
+SELECT ?reac_label 
+WHERE{
+    ?pept mnx:peptXref up:Q18A79 .
+    ?cata mnx:pept ?pept .
+    ?gpr mnx:cata ?cata ;
+         mnx:reac ?reac .
+    ?reac rdfs:label ?reac_label .
+
+}
+Result= mnxr145046c3
+
+
+FEDERATED QUERY - UniProt and MetaNetX
+
+
+Q10: 5 POINTS:  What is the official Gene ID (UniProt calls this a “mnemonic”) and the MetaNetX Reaction identifier (mnxr…..) for the protein that has “Starch synthase” catalytic activity in Clostridium difficile (taxon 272563).
+
+PREFIX mnx: <https://rdf.metanetx.org/schema/>
+PREFIX owl: <http://www.w3.org/2002/07/owl#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX up: <http://purl.uniprot.org/uniprot/>
+SELECT ?uniprot ?labgpr ?label ?cplab
+WHERE{
+    ?pept mnx:peptXref ?uniprot .
+    ?cata mnx:pept ?pept .
+    ?gpr mnx:cata ?cata ;
+         rdfs:label ?labgpr ;
+         mnx:reac ?reac .
+    ?cata mnx:cplx ?cplx .
+    ?cplx rdfs:label ?cplab .
+    ?reac mnx:right ?part .
+    ?part mnx:chem ?chem .
+    ?chem rdfs:comment ?label .
+    ?mnet mnx:gpr ?gpr ;
+          mnx:taxid taxon:272563 . 
+    
+}
