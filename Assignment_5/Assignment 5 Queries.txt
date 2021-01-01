@@ -67,6 +67,7 @@ Result= Beta-carotene + 4 reduced ferredoxin [iron-sulfur] cluster + 2 H(+) + 2 
 Q5: 1 POINT:  Retrieve the proteins ids, and date of submission, for proteins that have been added to UniProt this year   (HINT Google for “SPARQL FILTER by date”)
 
 PREFIX up:<http://purl.uniprot.org/core/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
 
 SELECT ?id ?date 
 WHERE
@@ -106,6 +107,10 @@ Result=1028449
 
 Q8: 3 points:  find the AGI codes and gene names for all Arabidopsis thaliana  proteins that have a protein function annotation description that mentions “pattern formation”
 
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX up: <http://purl.uniprot.org/uniprot/>
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/>
+
 SELECT ?name ?agi
 WHERE
 {
@@ -121,6 +126,7 @@ WHERE
 	FILTER regex( ?comment, 'pattern formation','i')
 }
 
+
 From the MetaNetX metabolic networks for metagenomics database SPARQL Endpoint: https://rdf.metanetx.org/sparql
 
 
@@ -131,6 +137,7 @@ Q9: 4 POINTS:  what is the MetaNetX Reaction identifier (starts with “mnxr”)
 PREFIX mnx: <https://rdf.metanetx.org/schema/>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX up: <http://purl.uniprot.org/uniprot/>
+
 SELECT ?reac_label 
 WHERE{
     ?pept mnx:peptXref up:Q18A79 .
@@ -149,23 +156,31 @@ FEDERATED QUERY - UniProt and MetaNetX
 Q10: 5 POINTS:  What is the official Gene ID (UniProt calls this a “mnemonic”) and the MetaNetX Reaction identifier (mnxr…..) for the protein that has “Starch synthase” catalytic activity in Clostridium difficile (taxon 272563).
 
 PREFIX mnx: <https://rdf.metanetx.org/schema/>
-PREFIX owl: <http://www.w3.org/2002/07/owl#>
-PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 PREFIX up: <http://purl.uniprot.org/uniprot/>
-SELECT ?uniprot ?labgpr ?label ?cplab
-WHERE{
-    ?pept mnx:peptXref ?uniprot .
+PREFIX taxon: <http://purl.uniprot.org/taxonomy/>
+
+SELECT ?mnemonic ?reac_label
+WHERE
+{
+  service <http://sparql.uniprot.org/sparql> {
+	?protein a up:Protein .
+   	?protein up:organism taxon:272563 .
+  	?protein up:mnemonic ?mnemonic .
+ 	?protein up:classifiedWith ?goTerm .
+	?goTerm rdfs:label ?activity .
+    filter contains(?activity, "starch synthase")
+  	bind (substr(str(?protein),33) as ?ac)
+  	bind (IRI(CONCAT("http://purl.uniprot.org/uniprot/",?ac)) as ?proteinRef)
+  }
+  service <https://rdf.metanetx.org/sparql> {
+    ?pept mnx:peptXref ?proteinRef .
     ?cata mnx:pept ?pept .
     ?gpr mnx:cata ?cata ;
-         rdfs:label ?labgpr ;
          mnx:reac ?reac .
-    ?cata mnx:cplx ?cplx .
-    ?cplx rdfs:label ?cplab .
-    ?reac mnx:right ?part .
-    ?part mnx:chem ?chem .
-    ?chem rdfs:comment ?label .
-    ?mnet mnx:gpr ?gpr ;
-          mnx:taxid taxon:272563 . 
+    ?reac rdfs:label ?reac_label .
+  }
+} 
+
+Result= mnemonic: GLGA_CLOD6; MetaNetX Reaction identifier: mnxr145046c3 (same as Q9)
     
-}
